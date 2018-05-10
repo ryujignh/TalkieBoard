@@ -1,4 +1,17 @@
-<% @categories.each do |category| %>
-  <%= category.name %>
-  <%= image_tag(category.image) %>
-<% end -%>
+<div class="container">
+  <h1 class="text-center mt-4">Categories</h1>
+  <div class="row">
+    <% @categories.each do |category| %>
+      <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+        <div class="card">
+          <%= link_to("") do %>
+            <div class="card-block">
+              <h5 class="card-title text-center mt-4"><%= category.name %></h5>
+              <%= image_tag(category.image, class: "card-img-top mb-4") %>
+            </div>
+          <% end -%>
+        </div>
+      </div>
+    <% end -%>
+  </div>
+</div>
