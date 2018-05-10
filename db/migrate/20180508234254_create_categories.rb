@@ -4,6 +4,7 @@ class CreateCategories < ActiveRecord::Migration[5.1]
   def up
     create_table :categories, bulk: true do |t|
       t.string :name
+      t.text :image
       t.timestamps
     end
     add_index :categories, :name

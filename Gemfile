@@ -43,6 +43,7 @@ group :development, :test do
   gem 'guard'
   gem 'guard-minitest'
   gem 'pry'
+  gem 'faker'
 end
 
 group :development do
