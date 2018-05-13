@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    models:
+      category: カテゴリー
+      item: アイテム
+    attributes:
+      category:
+        name: 名前
+        image: 画像
+      item:
+        name: 名前
+        description: 説明
+        image: 画像
+  categories: カテゴリー
+  items: アイテム

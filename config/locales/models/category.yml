@@ -1,0 +1,13 @@
+activerecord:
+  models:
+    category:
+      en: Category
+      ja: カテゴリー
+  attributes:
+    category:
+      name:
+        en: Name
+        ja: 名前
+      image:
+        en: Image
+        ja: 画像

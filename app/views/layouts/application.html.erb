@@ -9,9 +9,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-light bg-light">
-      <span class="navbar-brand mb-0 h1"><%= link_to('TalkieBoard', root_path) %></span>
-    </nav>
+    <%= render('layouts/nav_bar') %>
     <%= yield %>
   </body>
 </html>

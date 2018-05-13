@@ -1,5 +1,6 @@
 def setup
   Category.all.destroy_all
+  Item.all.destroy_all
 end
 
 def create
@@ -12,15 +13,21 @@ def create
   end
 
   puts "Creating items..."
-  Category.all.each do |category|
-    5.times do
-      Item.create!(
-        category: category,
-        name: "Item",
-        description: "Description",
-        image: category.image,
-        )
-    end
+  eat_category = Category.find_by_name("eat")
+  eat_items = [
+    {
+      name: "ご飯",
+      description: "",
+      image: "",
+
+    }
+  ]
+  5.times do
+    eat_category.items.create!(
+      name: "Eat category",
+      description: "Description",
+      image: eat_category.image,
+      )
   end
 
 end

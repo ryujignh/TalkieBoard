@@ -1,0 +1,16 @@
+activerecord:
+  models:
+    item:
+      en: Item
+      ja: アイテム
+  attributes:
+    item:
+      name:
+        en: Name
+        ja: 名前
+      description:
+        en: Description
+        ja: 説明
+      image:
+        en: Image
+        ja: 画像
