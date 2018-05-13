@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20180508234856) do
     t.bigint "category_id"
     t.string "name"
     t.string "description"
-    t.string "image"
+    t.text "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_items_on_category_id"

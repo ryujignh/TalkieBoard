@@ -13,7 +13,7 @@ bathroom: {
   image: "",
 }
 
-bathroom: {
+feeling: {
   name: "feeling",
   image: "",
 }

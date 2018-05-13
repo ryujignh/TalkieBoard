@@ -42,3 +42,7 @@ end
 def resource_tests(resource)
   integration_tests(resource) << controller_test(resource)
 end
+
+guard 'shell' do
+  watch(/^config\/routes\.rb$/) { `bundle exec rake routes > routes.txt` }
+end
