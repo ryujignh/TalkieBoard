@@ -1,4 +1,4 @@
-=> Parsing localization files. Done in 0.003s.
+=> Parsing localization files. Done in 0.004s.
          Prefix Verb   URI Pattern                              Controller#Action
            root GET    /                                        home#index
  category_items GET    /categories/:category_id/items(.:format) category_items#index

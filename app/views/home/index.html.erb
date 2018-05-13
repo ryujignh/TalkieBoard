@@ -6,7 +6,7 @@
         <div class="card">
           <%= link_to(category_items_path(category)) do %>
             <div class="card-block">
-              <h5 class="card-title text-center mt-4"><%= category.name %></h5>
+              <h5 class="card-title text-center mt-4"><%= category.localized_name %></h5>
               <%= image_tag(category.image, class: "card-img-top mb-4") %>
             </div>
           <% end -%>
