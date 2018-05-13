@@ -7,4 +7,6 @@ Rails.application.routes.draw do
     resources :items, controller: 'category_items', only: [:index]
   end
 
+  resources :locale, only: [:show]
+  resource :switch_language, only: [:update]
 end

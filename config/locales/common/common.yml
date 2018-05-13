@@ -1,0 +1,11 @@
+common:
+  languages:
+    english:
+      en: English
+      ja: 英語
+    japanese:
+      en: Japanese
+      ja: 日本語
+    switch:
+      en: "Switch to %{name}"
+      ja: "%{name}で表示"

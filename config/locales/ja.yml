@@ -1,4 +1,9 @@
 ja:
+  common:
+    languages:
+      english: 英語
+      japanese: 日本語
+      switch: "%{name}で表示"
   activerecord:
     models:
       category: カテゴリー

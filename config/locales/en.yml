@@ -1,4 +1,9 @@
 en:
+  common:
+    languages:
+      english: English
+      japanese: Japanese
+      switch: Switch to %{name}
   activerecord:
     models:
       category: Category

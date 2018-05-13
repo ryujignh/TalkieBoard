@@ -1,0 +1,9 @@
+<div class="footer">
+  <div class="row">
+    <% if Rails.env.development? %>
+      <div class="medium-12 reload_translation">
+        <%= link_to('Reload translations', locale_path(:id => I18n.locale, :reload => true)) %>
+      </div>
+    <% end -%>
+  </div>
+</div>

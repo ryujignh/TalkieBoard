@@ -1,11 +1,15 @@
-        Prefix Verb   URI Pattern                              Controller#Action
-          root GET    /                                        home#index
-category_items GET    /categories/:category_id/items(.:format) category_items#index
-    categories GET    /categories(.:format)                    categories#index
-               POST   /categories(.:format)                    categories#create
-  new_category GET    /categories/new(.:format)                categories#new
- edit_category GET    /categories/:id/edit(.:format)           categories#edit
-      category GET    /categories/:id(.:format)                categories#show
-               PATCH  /categories/:id(.:format)                categories#update
-               PUT    /categories/:id(.:format)                categories#update
-               DELETE /categories/:id(.:format)                categories#destroy
+=> Parsing localization files. Done in 0.003s.
+         Prefix Verb   URI Pattern                              Controller#Action
+           root GET    /                                        home#index
+ category_items GET    /categories/:category_id/items(.:format) category_items#index
+     categories GET    /categories(.:format)                    categories#index
+                POST   /categories(.:format)                    categories#create
+   new_category GET    /categories/new(.:format)                categories#new
+  edit_category GET    /categories/:id/edit(.:format)           categories#edit
+       category GET    /categories/:id(.:format)                categories#show
+                PATCH  /categories/:id(.:format)                categories#update
+                PUT    /categories/:id(.:format)                categories#update
+                DELETE /categories/:id(.:format)                categories#destroy
+         locale GET    /locale/:id(.:format)                    locale#show
+switch_language PATCH  /switch_language(.:format)               switch_languages#update
+                PUT    /switch_language(.:format)               switch_languages#update
