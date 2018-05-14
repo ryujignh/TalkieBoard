@@ -2,7 +2,7 @@ require 'test_helper'
 
 class CategoryItemsControllerTest < ActionDispatch::IntegrationTest
 
-  def test_show
+  def test_index
     category = categories(:eat)
     get category_items_path(category)
 

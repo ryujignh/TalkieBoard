@@ -47,6 +47,7 @@ group :development, :test do
   gem 'guard-shell'
   gem 'pry'
   gem 'faker'
+  gem 'devise'
 end
 
 group :test do

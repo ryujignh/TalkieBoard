@@ -2,8 +2,6 @@ require 'test_helper'
 
 class CategoryTest < ActiveSupport::TestCase
 
-  include Name
-
   def test_localize_name
     category = categories(:eat)
     I18n.locale = :ja
