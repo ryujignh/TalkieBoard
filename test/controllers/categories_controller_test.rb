@@ -24,8 +24,11 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   def test_create
-    post categories_path(create_params)
-    assert_redirected_to(root_path)
+    assert_difference('Category.count', 1,
+      "Should create item belongs to @category") do
+      post categories_path(create_params)
+      assert_redirected_to(root_path)
+    end
   end
 
   private

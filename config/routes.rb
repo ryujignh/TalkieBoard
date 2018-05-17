@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   resources :categories do
-    resources :items, controller: 'category_items', only: [:index]
+    resources :items, controller: 'category_items'
   end
 
   resources :locale, only: [:show]

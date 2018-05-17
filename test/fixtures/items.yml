@@ -1,27 +1,35 @@
 item_eat: {
   category: eat,
   name: "name",
+  name_en: "name en",
   description: "description",
+  description_en: "description en",
   image: "",
 }
 
 item_drink: {
   category: drink,
   name: "name",
+  name_en: "name en",
   description: "description",
+  description_en: "description en",
   image: "",
 }
 
 item_bathroom: {
   category: bathroom,
   name: "name",
+  name_en: "name en",
   description: "description",
+  description_en: "description en",
   image: "",
 }
 
 item_feeling: {
   category: feeling,
   name: "name",
+  name_en: "name en",
   description: "description",
+  description_en: "description en",
   image: "",
 }

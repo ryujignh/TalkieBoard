@@ -4,6 +4,8 @@ en:
       english: English
       japanese: Japanese
       switch: Switch to %{name}
+    login: Login
+    logout: Log out
   activerecord:
     models:
       category: Category

@@ -9,3 +9,9 @@ common:
     switch:
       en: "Switch to %{name}"
       ja: "%{name}で表示"
+  login:
+    en: Login
+    ja: ログイン
+  logout:
+    en: Log out
+    ja: ログアウト

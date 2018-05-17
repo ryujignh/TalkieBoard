@@ -15,7 +15,7 @@ class CategoryTest < ActiveSupport::TestCase
 
     assert_equal(category.name_en,
       category.localized_name,
-      "Should return English name if locale is Japanese"
+      "Should return English name if locale is English"
     )
 
   end
