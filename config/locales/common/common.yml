@@ -15,3 +15,9 @@ common:
   logout:
     en: Log out
     ja: ログアウト
+  edit:
+    en: Edit
+    ja: 編集
+  update_success:
+    en: "Successfully updated %{name}."
+    ja: "%{name}を更新しました。"

@@ -6,6 +6,8 @@ en:
       switch: Switch to %{name}
     login: Login
     logout: Log out
+    edit: Edit
+    update_success: Successfully updated %{name}.
   activerecord:
     models:
       category: Category

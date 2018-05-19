@@ -6,6 +6,8 @@ ja:
       switch: "%{name}で表示"
     login: ログイン
     logout: ログアウト
+    edit: 編集
+    update_success: "%{name}を更新しました。"
   activerecord:
     models:
       category: カテゴリー

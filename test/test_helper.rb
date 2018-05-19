@@ -7,4 +7,13 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def with_locale(locale_code)
+    original_locale = I18n.locale
+    begin
+      I18n.locale = locale_code
+      yield
+    ensure
+      I18n.locale = original_locale
+    end
+  end
 end

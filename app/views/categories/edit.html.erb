@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class="text-center mt-4"></h1>
+  <div class="row">
+    <%= form_for(@category) do |f| %>
+      <%= f.label :name  %>
+      <%= f.text_field :name, class: 'form-control', placeholder: "Enter name" %>
+      <%= f.label :name_en  %>
+      <%= f.text_field :name_en, class: 'form-control', placeholder: "Enter name_en" %>
+      <%= f.label :image  %>
+      <%= f.text_field :image, class: 'form-control', placeholder: "Enter image" %>
+      <%= f.submit(class: 'btn btn-primary') %>
+    <% end -%>
+  </div>
+</div>
