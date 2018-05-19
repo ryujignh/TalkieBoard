@@ -41,26 +41,16 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
 
   def test_update_success
     with_locale(:en) do
-      put category_path(update_params)
+      put category_path(update_params.merge(id: @category.id))
       assert_redirected_to(root_path)
       assert_equal("Successfully updated Category.",
         flash[:success],
         "Should flash notice for update success")
+      assert_update(@category.reload, update_params)
     end
   end
 
   private
-
-  def update_params
-    {
-      id: @category.id,
-      category: {
-        name: "Name updated",
-        name_en: "Name en updated",
-        image: "image update path",
-      },
-    }
-  end
 
   def create_params
     {
@@ -69,6 +59,16 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
         name_en: "New category",
         image: "",
       }
+    }
+  end
+
+  def update_params
+    {
+      category: {
+        name: "Name updated",
+        name_en: "Name en updated",
+        image: "image update path",
+      },
     }
   end
 

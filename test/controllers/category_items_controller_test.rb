@@ -4,6 +4,7 @@ class CategoryItemsControllerTest < ActionDispatch::IntegrationTest
 
   def setup
     @category = categories(:eat)
+    @item = @category.items.first
   end
 
   def test_index
@@ -34,6 +35,24 @@ class CategoryItemsControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  def test_edit
+    get edit_category_item_path(@category, @item)
+    assert_response(:success)
+  end
+
+  def test_update
+    with_locale(:en) do
+      item = @item
+      put category_item_path(update_params.merge(id: item.id, category_id: @category.id))
+      assert_redirected_to(category_items_path(@category))
+      assert_equal("Successfully updated Item.",
+        flash[:success],
+        "Should flash notice for update success")
+
+      assert_update(item.reload, update_params)
+    end
+  end
+
   private
 
   def create_params
@@ -45,6 +64,18 @@ class CategoryItemsControllerTest < ActionDispatch::IntegrationTest
         description_en: "description_en",
         image: "image",
       }
+    }
+  end
+
+  def update_params
+    {
+      item: {
+        name: "Updated name",
+        name_en: "Updated name_en",
+        description: "Updated description",
+        description_en: "Updated description_en",
+        image: "Updated image",
+      },
     }
   end
 

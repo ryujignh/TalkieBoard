@@ -1,6 +1,7 @@
 class CategoryItemsController < ApplicationController
 
   before_action :set_category
+  before_action :set_item, only: [:edit, :update]
 
   def index
     @items = @category.items
@@ -20,12 +21,31 @@ class CategoryItemsController < ApplicationController
     end
   end
 
-  def set_category
-    @category = Category.find(params[:category_id])
+  def edit
+    @item = @category.items.find(params[:id])
+  end
 
+  def update
+    @item.update_attributes(category_items_params)
+
+    if @item.errors.blank?
+      redirect_to(category_items_path)
+      flash[:success] = t('common.update_success', name: m(:item))
+    else
+      render_action(:new)
+      flash[:error] = @category.errors.full_messages
+    end
   end
 
   private
+
+  def set_category
+    @category = Category.find(params[:category_id])
+  end
+
+  def set_item
+    @item = @category.items.find(params[:id])
+  end
 
   def category_items_params
     params.require(:item).permit(:name, :name_en, :description, :description_en, :image)

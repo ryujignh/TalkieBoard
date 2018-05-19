@@ -16,4 +16,16 @@ class ActiveSupport::TestCase
       I18n.locale = original_locale
     end
   end
+
+  def assert_update(object, update_params)
+    object_name = object.class.name.downcase.to_sym
+
+    update_params[object_name].each_pair do |key, value|
+      assert_equal(value,
+        object[key],
+        "Should update #{key} to #{value}")
+    end
+  end
+
+
 end
