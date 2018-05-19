@@ -1,9 +1,30 @@
-<div class="footer">
-  <div class="row">
-    <% if Rails.env.development? %>
-      <div class="medium-12 reload_translation">
-        <%= link_to('Reload translations', locale_path(:id => I18n.locale, :reload => true)) %>
+<footer class="page-footer font-small bg-light blue pt-4 mt-4">
+
+  <div class="container-fluid text-center text-md-left">
+    <div class="row">
+      <div class="col-md-6">
+        <% if Rails.env.development? %>
+          <div class="medium-12 reload_translation">
+            <%= link_to('Reload translations', locale_path(:id => I18n.locale, :reload => true)) %>
+          </div>
+        <% end -%>
+        <%= link_to("#{t('common.languages.switch', name: avilable_language_in_words)}",
+                      switch_language_path(locale: avilable_language),
+                      method: :put,
+                      class: 'nav-link') %>
       </div>
-    <% end -%>
+      <div class="col-md-6">
+        <h5 class="text-uppercase">CONTACT</h5>
+        <ul class="list-unstyled">
+          <li>
+            <%= link_to('Email') %>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-</div>
+  <div class="footer-copyright py-3 text-center">
+    © 2018 Copyright: Ryuji Ganaha
+  </div>
+
+</footer>
