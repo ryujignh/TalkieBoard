@@ -51,4 +51,4 @@ production:
   <<: *default
   database: talkie_board_production
   username: talkie_board
-  password: <%= ENV['TALKIE_BOARD_DATABASE_PASSWORD'] %>
+  password: ENV['TALKIE_BOARD_DATABASE_PASSWORD'] %>
