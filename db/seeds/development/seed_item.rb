@@ -5,7 +5,8 @@ class SeedItem
 
     Item.all.destroy_all
 
-    image = SeedShared.image
+    image_folder = 'eat'
+    # image = SeedShared.image
 
     eat_category = Category.find_by_name_en("Eat")
     eat_items = [
@@ -14,7 +15,7 @@ class SeedItem
         name_en: "Rice",
         description: "ご飯が食べたいです",
         description_en: "I want to eat rice",
-        image: image,
+        image: "#{image_folder}/rice.png",
 
       },
       {
@@ -22,14 +23,14 @@ class SeedItem
         name_en: "Miso soup",
         description: "味噌汁が飲みたいです",
         description_en: "I want to drink miso soup",
-        image: image,
+        image: "#{image_folder}/miso_soup.png",
       },
       {
         name: "オムレツ",
         name_en: "omlet",
         description: "オムレツが食べたいです",
         description_en: "I want to omlet",
-        image: image,
+        image: "#{image_folder}/omlet.png",
       },
 
     ]

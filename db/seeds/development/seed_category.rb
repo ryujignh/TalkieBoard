@@ -8,11 +8,11 @@ class SeedCategory
     image = SeedShared.image
 
     categories = [
-      {name: "食べる", name_en: "Eat", image: image},
-      {name: "飲む", name_en: "Drink", image: image},
-      {name: "トイレ", name_en: "Toilet", image: image},
-      {name: "シャワー", name_en: "Shower", image: image},
-      {name: "気分", name_en: "Feeling", image: image},
+      {name: "食べる", name_en: "Eat", image: "eat/eat.png"},
+      {name: "飲む", name_en: "Drink", image: "drink/drink.png"},
+      {name: "トイレ", name_en: "Toilet", image: "bathroom/toilet.png"},
+      {name: "シャワー", name_en: "Shower", image: "bathroom/shower.png"},
+      {name: "気分", name_en: "Feeling", image: "feeling/feeling.png"},
     ]
 
     categories.each do |category|

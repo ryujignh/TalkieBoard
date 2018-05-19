@@ -9,7 +9,6 @@ module ApplicationHelper
   end
 
   def set_locale
-    binding.pry
     cookies[:locale] = (params[:id] || I18n.default_locale).to_s
   end
 

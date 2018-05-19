@@ -17,7 +17,21 @@ class ItemTest < ActiveSupport::TestCase
       item.localized_name,
       "Should return English name if locale is English"
     )
+  end
 
+  def test_display_image
+    item = items(:item_eat)
+    assert_equal('shared/no_image.png',
+      item.display_image,
+      "Should return default image path if item image doesn't exist"
+      )
+
+    item = items(:item_drink)
+    item.update_attribute(:image, 'bathroom/toilet.png')
+    assert_equal('bathroom/toilet.png',
+      item.display_image,
+      "Should return image path if specified image file exists"
+      )
   end
 
 end

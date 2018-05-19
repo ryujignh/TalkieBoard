@@ -1,4 +1,4 @@
-=> Parsing localization files. Done in 0.004s.
+=> Parsing localization files. Done in 0.003s.
                   Prefix Verb   URI Pattern                                       Controller#Action
         new_user_session GET    /users/sign_in(.:format)                          devise/sessions#new
             user_session POST   /users/sign_in(.:format)                          devise/sessions#create
