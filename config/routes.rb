@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 
+  resources :contacts, only: [:new, :create]
+
   resources :categories do
     resources :items, controller: 'category_items'
   end

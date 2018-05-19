@@ -1,3 +1,7 @@
+# >= x.x.x  x.x.x以上のバージョンが必要
+# >= x.x.x, < y.y.y x.x.x以上、y.y.y以下のバージョンが必要
+# ~> 1.0.0 1.0.0以上で利用可能で、1.0.9などは問題なく、1.1にバージョンが上がると利用不可になります。
+
 source 'https://rubygems.org'
 ruby '2.5.1'
 
@@ -38,6 +42,11 @@ gem 'jquery-rails'
 
 gem 'devise', '4.4.3'
 gem 'devise-i18n', '1.6.2'
+
+gem 'mail_form', '1.7.1'
+
+# Display SVG images on view templates
+gem 'inline_svg', '1.3.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
