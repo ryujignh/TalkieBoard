@@ -18,6 +18,12 @@ common:
   edit:
     en: Edit
     ja: 編集
+  about_us:
+    en: ABOUT Talkie Board
+    ja: Talkie Boardについて
+  contact:
+    en: Contact
+    ja: お問い合わせ
   update_success:
     en: "Successfully updated %{name}."
     ja: "%{name}を更新しました。"

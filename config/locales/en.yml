@@ -7,6 +7,8 @@ en:
     login: Login
     logout: Log out
     edit: Edit
+    about_us: ABOUT Talkie Board
+    contact: Contact
     update_success: Successfully updated %{name}.
   activerecord:
     models:

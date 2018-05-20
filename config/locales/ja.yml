@@ -7,6 +7,8 @@ ja:
     login: ログイン
     logout: ログアウト
     edit: 編集
+    about_us: Talkie Boardについて
+    contact: お問い合わせ
     update_success: "%{name}を更新しました。"
   activerecord:
     models:
