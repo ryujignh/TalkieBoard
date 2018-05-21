@@ -4,14 +4,14 @@
     <%= link_to('Add new category', new_category_path) %>
   </div>
   <% @categories.each do |category| %>
-    <div class="small-6 medium-4 large-3 columns">
-        <% if Rails.env.development? || user_signed_in? %>
+    <div class="small-6 medium-4 large-3 columns end">
+      <% if Rails.env.development? || user_signed_in? %>
         <%= link_to(t('common.edit'), edit_category_path(category)) %>
-        <% end -%>
-        <%= link_to(category_items_path(category)) do %>
-          <h5 class="card-title text-center mt-4"><%= category.localized_name %></h5>
-          <%= image_tag("#{category.display_image}", class: "card-img-top mb-4") %>
-        <% end -%>
+      <% end -%>
+      <%= link_to(category_items_path(category)) do %>
+        <h5 class="text-center"><%= category.localized_name %></h5>
+        <%= image_tag("#{category.display_image}", class: "card-img-top mb-4") %>
+      <% end -%>
     </div>
   <% end -%>
 </div>
