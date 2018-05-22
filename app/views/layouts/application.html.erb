@@ -6,8 +6,9 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -16,6 +17,5 @@
     <%= render('layouts/nav_bar') %>
     <%= yield %>
     <%= render('layouts/footer') %>
-    <%= javascript_include_tag "application" %>
   </body>
 </html>
