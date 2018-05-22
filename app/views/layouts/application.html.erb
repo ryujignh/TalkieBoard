@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>TalkieBoard</title>
-    <%= csrf_meta_tags %>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
+
     <%= render('layouts/nav_bar') %>
-    <% if notice -%>
-      <p class="notice"><%= notice %></p>
-    <% end -%>
-    <% if alert -%>
-      <p class="alert"><%= alert %></p>
-    <% end -%>
     <%= yield %>
     <%= render('layouts/footer') %>
   </body>

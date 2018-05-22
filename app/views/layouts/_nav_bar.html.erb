@@ -1,14 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <span class="navbar-brand mb-0 h1"><%= link_to('TalkieBoard', root_path) %></span>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="top-bar" data-topbar role="navigation">
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-    </ul>
-    <ul class="navbar-nav my-2 my-lg-0">
-      <li class="nav-item">
+  <ul class="title-area">
+    <li class="name">
+      <h1><%= link_to('TalkieBoard', root_path) %></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li>
         <%= link_to("#{t('common.languages.switch', name: avilable_language_in_words)}",
                       switch_language_path(locale: avilable_language),
                       method: :put,
@@ -21,5 +24,6 @@
         <li class="nav-item"><%= link_to(t('common.login'), new_user_session_path, class: 'nav-link') %></li>
       <% end -%>
     </ul>
-  </div>
+  </section>
+
 </nav>
