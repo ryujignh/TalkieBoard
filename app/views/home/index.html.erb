@@ -1,7 +1,9 @@
 <div class="row">
-  <h1 class="text-center"><%= t('categories') %></h1>
-  <div>
+  <div class="small-12">
+    <h1 class="text-center"><%= t('categories') %></h1>
     <%= link_to('Add new category', new_category_path) %>
+  </div>
+  <div>
   </div>
   <% @categories.each do |category| %>
     <div class="small-6 medium-3 large-2 columns end">
