@@ -41,8 +41,6 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
-    autoprefixer-rails (8.4.1)
-      execjs
     bcrypt (3.1.11)
     bindex (0.5.0)
     builder (3.2.3)
@@ -77,9 +75,6 @@ GEM
       i18n (>= 0.7)
     ffi (1.9.23)
     formatador (0.2.5)
-    foundation-rails (5.4.5.0)
-      railties (>= 3.1.0)
-      sass (>= 3.2.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     guard (2.14.2)
@@ -235,14 +230,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  autoprefixer-rails
   byebug
   capybara (~> 2.13)
   devise (= 4.4.3)
   devise-i18n (= 1.6.2)
   dotenv-rails
   faker
-  foundation-rails
   guard
   guard-minitest
   guard-shell
