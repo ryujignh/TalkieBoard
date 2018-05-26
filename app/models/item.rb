@@ -14,7 +14,7 @@
 
 class Item < ApplicationRecord
 
-  belongs_to :category
+  belongs_to :category, touch: true
 
   def localized_name
     I18n.locale == :ja ? self.name : self.name_en

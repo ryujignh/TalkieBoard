@@ -1,14 +1,10 @@
 <div class="row">
-  <div class="small-12">
-    <h1 class="text-center"><%= t('categories') %></h1>
-    <%= link_to('Add new category', new_category_path) %>
-  </div>
-  <div>
-  </div>
   <% @categories.each do |category| %>
     <div class="small-6 medium-3 large-2 columns end">
-      <% if Rails.env.development? || user_signed_in? %>
-        <%= link_to(t('common.edit'), edit_category_path(category)) %>
+      <% if false %>
+        <% if Rails.env.development? || user_signed_in? %>
+          <%= link_to(t('common.edit'), edit_category_path(category)) %>
+        <% end %>
       <% end -%>
       <%= link_to(category_items_path(category)) do %>
         <h5 class="text-center"><%= category.localized_name %></h5>

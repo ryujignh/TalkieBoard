@@ -22,5 +22,9 @@ en:
         name: Name
         description: Description
         image: Image
-  categories: Categories
-  items: Items
+  category:
+    title: Categories
+    add_new: Add new category
+  item:
+    title: Items
+    add_new: Add item

@@ -1,3 +1,7 @@
-items:
-  en: Items
-  ja: アイテム
+item:
+  title:
+    en: Items
+    ja: 項目
+  add_new:
+    en: Add item
+    ja: 項目を追加

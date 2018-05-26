@@ -5,3 +5,25 @@
 .hidden {
   display: none;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+section.main_section {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.title_container {
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+}
+
+footer {
+  margin-top: auto;
+  padding: 1rem 0 1rem 0;
+  background-color: #e6e6e6;
+}

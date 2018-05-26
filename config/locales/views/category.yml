@@ -1,3 +1,7 @@
-categories:
-  en: Categories
-  ja: カテゴリー
+category:
+  title:
+    en: Categories
+    ja: カテゴリー
+  add_new:
+    en: Add new category
+    ja: カテゴリーを追加
