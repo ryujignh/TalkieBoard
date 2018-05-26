@@ -1,53 +1,22 @@
 <div class="top-bar">
   <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">Site Title</li>
-      <li>
-        <a href="#">One</a>
-        <ul class="menu vertical">
-          <li><a href="#">One</a></li>
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Two</a></li>
-      <li><a href="#">Three</a></li>
+    <ul class="menu">
+      <li class="menu-text"><%= link_to('TalkieBoard', root_path) %></li >
     </ul>
   </div>
   <div class="top-bar-right">
     <ul class="menu">
-      <li><input type="search" placeholder="Search"></li>
-      <li><button type="button" class="button">Search</button></li>
-    </ul>
-  </div>
-</div>
-
-<nav class="top-bar" data-topbar role="navigation">
-
-  <ul class="title-area">
-    <li class="name">
-      <h1><%= link_to('TalkieBoard', root_path) %></h1>
-    </li>
-     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-  </ul>
-
-  <section class="top-bar-section">
-    <!-- Right Nav Section -->
-    <ul class="right">
       <li>
         <%= link_to("#{t('common.languages.switch', name: avilable_language_in_words)}",
                       switch_language_path(locale: avilable_language),
                       method: :put,
                       class: 'nav-link') %>
       </li>
-
       <% if user_signed_in? -%>
-        <li class="nav-item"><%= link_to(t('common.logout'), destroy_user_session_path, method: :delete, class: 'nav-link') %></li>
+        <li><%= link_to(t('common.logout'), destroy_user_session_path, method: :delete, class: 'nav-link') %></li>
       <% else -%>
-        <li class="nav-item"><%= link_to(t('common.login'), new_user_session_path, class: 'nav-link') %></li>
+        <li><%= link_to(t('common.login'), new_user_session_path, class: 'nav-link') %></li>
       <% end -%>
     </ul>
-  </section>
-
-</nav>
+  </div>
+</div>
