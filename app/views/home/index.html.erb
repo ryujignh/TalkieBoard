@@ -1,15 +1,13 @@
 <div class="row">
-  <% @categories.each do |category| %>
-    <div class="small-6 medium-3 large-2 columns end">
-      <% if false %>
-        <% if Rails.env.development? || user_signed_in? %>
-          <%= link_to(t('common.edit'), edit_category_path(category)) %>
-        <% end %>
-      <% end -%>
-      <%= link_to(category_items_path(category)) do %>
-        <h5 class="text-center"><%= category.localized_name %></h5>
-        <%= image_tag(category.display_image) %>
-      <% end -%>
-    </div>
-  <% end -%>
+  <div class="title_container">
+    <h1 class="text-center"><%= t('category.want_to') %></h1>
+  </div>
 </div>
+
+<%= render('shared/contents', contents: @categories, content_type: 'category') %>
+
+<% if false %>
+  <% if Rails.env.development? || user_signed_in? %>
+    <%= link_to(t('common.edit'), edit_category_path(category)) %>
+  <% end %>
+<% end -%>

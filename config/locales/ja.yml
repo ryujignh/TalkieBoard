@@ -25,6 +25,7 @@ ja:
   category:
     title: カテゴリー
     add_new: カテゴリーを追加
+    want_to: あなたは何を伝えたいですか？
   item:
     title: 項目
     add_new: 項目を追加

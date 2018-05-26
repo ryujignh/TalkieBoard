@@ -6,9 +6,9 @@ class SeedItem
     Item.all.destroy_all
 
     image_folder = 'eat'
-    # image = SeedShared.image
-
-    eat_category = Category.find_by_name_en("Eat")
+    
+    # TODO: give category id for identifier
+    eat_category = Category.find_by_name_en("Want to Eat")
     eat_items = [
       {
         name: "ご飯",

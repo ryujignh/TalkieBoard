@@ -25,6 +25,7 @@ en:
   category:
     title: Categories
     add_new: Add new category
+    want_to: What would you like to tell?
   item:
     title: Items
     add_new: Add item

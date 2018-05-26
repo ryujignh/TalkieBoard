@@ -1,0 +1,22 @@
+<div class="row">
+<% contents = local_assigns[:contents] %>
+  <% contents.each do |content| %>
+    <div class="small-6 medium-3 large-2 columns end">
+      <div class="text-center">
+        <% if local_assigns[:content_type] == 'category' %>
+          <!-- render with link to category items -->
+          <%= link_to(category_items_path(content)) do %>
+            <h5 class="text-center"><%= content.localized_name %></h5>
+            <%= image_tag(content.display_image) %>
+          <% end -%>
+        <% else %>  
+        <!-- render items -->
+          <h5><%= content.localized_name %></h5>
+          <%= image_tag(content.display_image) %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+
+
+</div>
