@@ -54,6 +54,9 @@ end
 
 guard 'shell' do
   watch(/^config\/routes\.rb$/) { `bundle exec rake routes > routes.txt` }
+  watch(/^config\/locales\/common\.yml$/) { `ruby lib/locale_parser.rb` }
+  watch(/^config\/locales\/models\.yml$/) { `ruby lib/locale_parser.rb` }
+  watch(/^config\/locales\/views\.yml$/) { `ruby lib/locale_parser.rb` }
 end
 
 guard 'livereload' do
