@@ -25,6 +25,15 @@ guard :minitest, spring: "bin/rails test", all_on_start: false do
   end
 end
 
+guard 'livereload' do
+  watch(%r{app/views/.+\.(erb|haml|slim)})
+  watch(%r{app/helpers/.+\.rb})
+  watch(%r{public/.+\.(scss|css|js|html)})
+  watch(%r{config/locales/.+\.yml})
+  # Rails Assets Pipeline
+  watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html))).*}) { |m| "/assets/#{m[3]}" }
+end
+
 # 与えられたリソースに対応する統合テストを返す
 def integration_tests(resource = :all)
   if resource == :all
@@ -45,4 +54,46 @@ end
 
 guard 'shell' do
   watch(/^config\/routes\.rb$/) { `bundle exec rake routes > routes.txt` }
+  watch(/^config\/locales\/common\.yml$/) { `ruby lib/locale_parser.rb` }
+  watch(/^config\/locales\/models\.yml$/) { `ruby lib/locale_parser.rb` }
+  watch(/^config\/locales\/views\.yml$/) { `ruby lib/locale_parser.rb` }
+end
+
+guard 'livereload' do
+  extensions = {
+    css: :css,
+    scss: :css,
+    sass: :css,
+    js: :js,
+    coffee: :js,
+    html: :html,
+    png: :png,
+    gif: :gif,
+    jpg: :jpg,
+    jpeg: :jpeg,
+    # less: :less, # uncomment if you want LESS stylesheets done in browser
+  }
+
+  rails_view_exts = %w(erb haml slim)
+
+  # file types LiveReload may optimize refresh for
+  compiled_exts = extensions.values.uniq
+  watch(%r{public/.+\.(#{compiled_exts * '|'})})
+
+  extensions.each do |ext, type|
+    watch(%r{
+          (?:app|vendor)
+          (?:/assets/\w+/(?<path>[^.]+) # path+base without extension
+           (?<ext>\.#{ext})) # matching extension (must be first encountered)
+          (?:\.\w+|$) # other extensions
+          }x) do |m|
+      path = m[1]
+      "/assets/#{path}.#{type}"
+    end
+  end
+
+  # file needing a full reload of the page anyway
+  watch(%r{app/views/.+\.(#{rails_view_exts * '|'})$})
+  watch(%r{app/helpers/.+\.rb})
+  watch(%r{config/locales/.+\.yml})
 end

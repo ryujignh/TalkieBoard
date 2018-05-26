@@ -22,5 +22,10 @@ ja:
         name: 名前
         description: 説明
         image: 画像
-  categories: カテゴリー
-  items: アイテム
+  category:
+    title: カテゴリー
+    add_new: カテゴリーを追加
+    want_to: あなたは何を伝えたいですか？
+  item:
+    title: 項目
+    add_new: 項目を追加

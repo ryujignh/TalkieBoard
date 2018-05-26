@@ -1,3 +1,10 @@
-categories:
-  en: Categories
-  ja: カテゴリー
+category:
+  title:
+    en: Categories
+    ja: カテゴリー
+  add_new:
+    en: Add new category
+    ja: カテゴリーを追加
+  want_to:
+    en: What would you like to tell?
+    ja: あなたは何を伝えたいですか？

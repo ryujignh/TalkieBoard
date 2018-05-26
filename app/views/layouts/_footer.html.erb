@@ -1,15 +1,17 @@
 <footer>
-  <hr>
   <div class="row">
-    <h5><%= t('common.about_us') %></h5>
-    <%= link_to(t('common.contact'), new_contact_path) %>
-    <% if Rails.env.development? %>
+    <div class="small-6 columns">
+      <% if Rails.env.development? %>
       <div class="medium-12 reload_translation">
         <%= link_to('Reload translations', locale_path(:id => I18n.locale, :reload => true)) %>
       </div>
-    <% end -%>
-    <p>
-      © 2018 Copyright: Talkie Board
-    </p>
+      <p>
+        © 2018 Copyright: Talkie Board
+      </p>
+      <% end -%>
+    </div>
+    <div class="small-6 columns">
+      <%= link_to(t('common.contact'), new_contact_path) %>
+    </div>  
   </div>
 </footer>

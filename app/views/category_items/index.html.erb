@@ -1,16 +1,13 @@
 <div class="row">
-  <h1 class="text-center"><%= @category.localized_name %></h1>
-  <div>
-    <%= link_to('Add new category', new_category_item_path) %>
+  <div class="title_container">
+    <h1 class="text-center"><%= @category.localized_name %></h1>
+    <%= link_to(t('item.add_new'), new_category_item_path) %>
   </div>
-  <% @items.each do |item| %>
-    <div class="small-6 medium-3 large-2 columns end">
-      <% if Rails.env.development? || user_signed_in? %>
-        <%= link_to(t('common.edit'), edit_category_item_path(@category, item)) %>
-      <% end -%>
-      <h5 class="text-center"><%= item.localized_name %></h5>
-      <%= image_tag(item.display_image) %>
-    </div>
-  <% end -%>
-
 </div>
+  <%= render('shared/contents', contents: @items) %>
+
+<% if false %>
+  <% if Rails.env.development? || user_signed_in? %>
+    <%= link_to(t('common.edit'), edit_category_item_path(@category, item)) %>
+  <% end %>         
+<% end %>         

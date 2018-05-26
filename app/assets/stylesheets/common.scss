@@ -1,7 +1,25 @@
-// Place all the styles related to the contacts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 .hidden {
   display: none;
+}
+
+.title_container {
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 2.5rem;
+  h1 {
+    font-weight: 300;
+  }
+}
+
+.site_title {
+  font-size: 1.8rem;
+  a {
+    font-weight: 400;
+  }
 }
