@@ -10,6 +10,7 @@ ja:
     about_us: Talkie Boardについて
     contact: お問い合わせ
     update_success: "%{name}を更新しました。"
+    menu: メニュー
   activerecord:
     models:
       category: カテゴリー

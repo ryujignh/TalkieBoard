@@ -29,7 +29,8 @@ guard 'livereload' do
   watch(%r{app/views/.+\.(erb|haml|slim)})
   watch(%r{app/helpers/.+\.rb})
   watch(%r{public/.+\.(scss|css|js|html)})
-  watch(%r{config/locales/.+\.yml})
+  # Causing infinite reloading
+  # watch(%r{config/locales/.+\.yml})
   # Rails Assets Pipeline
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html))).*}) { |m| "/assets/#{m[3]}" }
 end
@@ -95,5 +96,6 @@ guard 'livereload' do
   # file needing a full reload of the page anyway
   watch(%r{app/views/.+\.(#{rails_view_exts * '|'})$})
   watch(%r{app/helpers/.+\.rb})
-  watch(%r{config/locales/.+\.yml})
+  # Causing infinite reloading
+  # watch(%r{config/locales/.+\.yml})
 end

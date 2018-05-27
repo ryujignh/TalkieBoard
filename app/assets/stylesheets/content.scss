@@ -7,3 +7,16 @@ img {
   width: 80%;
   height: 80%;
 }
+
+div.content_container {
+  margin-top: 1rem;
+  div.content {
+    padding: 1rem;
+    border-radius: 5%;
+    background: rgba(15, 188, 249, 1);
+  }
+
+  p.title {
+    margin-bottom: 0.25rem;
+  }
+}

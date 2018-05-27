@@ -2,16 +2,36 @@
 //   background-color: none;
 // }
 
-.top-bar {
-  // height: 1.5rem;
-  background-color: transparent;   
-  ul {
-    background-color: transparent;   
+// .top-bar {
+//   height: 3.5rem;
+//   background-color: rgba(15, 188, 249, 1);
+//   ul {
+//     background-color: transparent;   
+//     a {
+//       color: white;
+//     }
+//   }
+// }
+
+div.show-for-small-only {
+  .row {
+    width: 100%;
+  }
+}
+ul.accordion-menu.show-for-small-only {
+  li.is-accordion-submenu-parent {
+    a {
+      text-align: right;
+    }
+    a:after {
+      // border-top-style: none; 
+      right: -0.1rem;
+    }
   }
 }
 
 footer {
   margin-top: auto;
   padding: .5rem 0 .5rem 0;
-  background-color: #e6e6e6;
+  // background-color: rgba(5, 136, 183, 0.5);
 }

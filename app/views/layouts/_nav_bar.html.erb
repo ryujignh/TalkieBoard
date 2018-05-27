@@ -1,25 +1,51 @@
-<header>
-  <div class="top-bar">
-    <div class="top-bar-left">
-      <ul class="menu">
-        <li class="menu-text site_title"><%= link_to('Talkie Board', root_path) %></li>
-      </ul>
+<div class="top-bar show-for-medium">
+  <div class="top-bar-left">
+    <ul class="menu">
+      <li class="menu-text site_title"><%= link_to('Talkie Board', root_path) %></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="vertical medium-horizontal hide-for-small-only menu">
+      <li><%= link_to(t('category.add_new'), new_category_path) %></li>
+      <li>
+        <%= link_to("#{t('common.languages.switch', name: avilable_language_in_words)}",
+                      switch_language_path(locale: avilable_language),
+                      method: :put,
+                      class: 'nav-link') %>
+      </li>
+      <% if user_signed_in? -%>
+        <li><%= link_to(t('common.logout'), destroy_user_session_path, method: :delete, class: 'nav-link') %></li>
+      <% else -%>
+        <li><%= link_to(t('common.login'), new_user_session_path, class: 'nav-link') %></li>
+      <% end -%>
+    </ul>
+
+  </div>
+</div>
+
+<div class="top-bar show-for-small-only">
+  <div class="row">
+    <div class="columns small-6">
+      <span class="menu-text site_title"><%= link_to('Talkie Board', root_path) %></span>
     </div>
-    <div class="top-bar-right">
-      <ul class="menu">
-        <li><%= link_to(t('category.add_new'), new_category_path) %></li>
+    <div class="columns small-6">
+      <ul class="vertical menu accordion-menu show-for-small-only" data-accordion-menu>
         <li>
-          <%= link_to("#{t('common.languages.switch', name: avilable_language_in_words)}",
-                        switch_language_path(locale: avilable_language),
-                        method: :put,
-                        class: 'nav-link') %>
+          <a href="#" class="left"><%= t('common.menu') %></a>
+          <ul class="menu vertical nested">
+            <li><%= link_to(t('category.add_new'), new_category_path) %></li>
+            <li>
+              <%= link_to("#{t('common.languages.switch', name: avilable_language_in_words)}",
+                            switch_language_path(locale: avilable_language),
+                            method: :put,
+                            class: 'nav-link') %>
+            </li>
+            <li>
+              <%= link_to(t('common.contact'), new_contact_path) %>
+            </li>
+          </ul>
         </li>
-        <% if user_signed_in? -%>
-          <li><%= link_to(t('common.logout'), destroy_user_session_path, method: :delete, class: 'nav-link') %></li>
-        <% else -%>
-          <li><%= link_to(t('common.login'), new_user_session_path, class: 'nav-link') %></li>
-        <% end -%>
       </ul>
     </div>
   </div>
-</header>
+</div>  

@@ -27,3 +27,6 @@ common:
   update_success:
     en: "Successfully updated %{name}."
     ja: "%{name}を更新しました。"
+  menu:
+    en: Menu
+    ja: メニュー

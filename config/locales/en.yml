@@ -10,6 +10,7 @@ en:
     about_us: ABOUT Talkie Board
     contact: Contact
     update_success: Successfully updated %{name}.
+    menu: Menu
   activerecord:
     models:
       category: Category
