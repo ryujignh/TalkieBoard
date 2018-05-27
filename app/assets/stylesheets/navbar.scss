@@ -1,17 +1,21 @@
-// header {
-//   background-color: none;
-// }
+a.site_title {
+  color: white !important;
+  font-weight: 400;
+}
 
-// .top-bar {
-//   height: 3.5rem;
-//   background-color: rgba(15, 188, 249, 1);
-//   ul {
-//     background-color: transparent;   
-//     a {
-//       color: white;
-//     }
-//   }
-// }
+.top-bar {
+  background-color: rgba(15, 188, 249, 1);
+  ul {
+    background-color: transparent;   
+    a {
+      color: white;
+    }
+  }
+}
+
+.top-bar.pc {
+  height: 3.5rem;
+}
 
 div.show-for-small-only {
   .row {
@@ -24,7 +28,6 @@ ul.accordion-menu.show-for-small-only {
       text-align: right;
     }
     a:after {
-      // border-top-style: none; 
       right: -0.1rem;
     }
   }
@@ -33,5 +36,4 @@ ul.accordion-menu.show-for-small-only {
 footer {
   margin-top: auto;
   padding: .5rem 0 .5rem 0;
-  // background-color: rgba(5, 136, 183, 0.5);
 }
