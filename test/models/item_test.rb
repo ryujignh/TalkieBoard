@@ -21,14 +21,14 @@ class ItemTest < ActiveSupport::TestCase
 
   def test_display_image
     item = items(:item_eat)
-    assert_equal('shared/no_image.png',
+    assert_equal('shared/no_image.svg',
       item.display_image,
       "Should return default image path if item image doesn't exist"
       )
 
     item = items(:item_drink)
-    item.update_attribute(:image, 'bathroom/toilet.png')
-    assert_equal('bathroom/toilet.png',
+    item.update_attribute(:image, 'bathroom/toilet.svg')
+    assert_equal('bathroom/toilet.svg',
       item.display_image,
       "Should return image path if specified image file exists"
       )

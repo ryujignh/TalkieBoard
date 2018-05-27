@@ -21,7 +21,7 @@ class Category < ApplicationRecord
     if !self.image.blank? && FileTest.exist?("app/assets/images/#{self.image}")
       file_path = self.image
     else
-      file_path = 'shared/no_image.png'
+      file_path = 'shared/no_image.svg'
     end
     file_path
   end
