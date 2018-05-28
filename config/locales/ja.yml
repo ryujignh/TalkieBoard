@@ -18,9 +18,13 @@ ja:
     attributes:
       category:
         name: 名前
+        name_en: 名前(英語)
+        position: 順番
         image: 画像
       item:
         name: 名前
+        name_en: 名前(英語)
+        position: 順番
         description: 説明
         image: 画像
   category:

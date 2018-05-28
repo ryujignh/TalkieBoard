@@ -5,6 +5,7 @@
 # | category_id    | bigint(20)   | YES  | MUL | NULL    |                |
 # | name           | varchar(255) | YES  |     | NULL    |                |
 # | name_en        | varchar(255) | YES  |     | NULL    |                |
+# | position       | int(11)      | YES  |     | NULL    |                |
 # | description    | varchar(255) | YES  |     | NULL    |                |
 # | description_en | varchar(255) | YES  |     | NULL    |                |
 # | image          | text         | YES  |     | NULL    |                |
@@ -13,6 +14,8 @@
 # +----------------+--------------+------+-----+---------+----------------+
 
 class Item < ApplicationRecord
+
+  validates_uniqueness_of :position, scope: :category_id
 
   belongs_to :category, touch: true
 

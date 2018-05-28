@@ -8,6 +8,12 @@ activerecord:
       name:
         en: Name
         ja: 名前
+      name_en:
+        en: Name
+        ja: 名前(英語)
+      position:
+        en: Position
+        ja: 順番
       description:
         en: Description
         ja: 説明

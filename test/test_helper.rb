@@ -27,5 +27,10 @@ class ActiveSupport::TestCase
     end
   end
 
+  def assert_false(condition, assertion_message)
+    assert(condition != true,
+      assertion_message)
+  end
+
 
 end

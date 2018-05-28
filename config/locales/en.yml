@@ -18,9 +18,13 @@ en:
     attributes:
       category:
         name: Name
+        name_en: Name
+        position: Position
         image: Image
       item:
         name: Name
+        name_en: Name
+        position: Position
         description: Description
         image: Image
   category:

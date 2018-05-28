@@ -34,4 +34,18 @@ class CategoryTest < ActiveSupport::TestCase
       )
   end
 
+  def test_validate_position
+    category = categories(:eat)
+    assert(category.position == 1,
+      "Should have position 1")
+
+    new_category = Category.new(name: 'New category', position: 1)
+    assert_false(new_category.valid?,
+      "Should be invalid if position duplicates with other object")
+
+    new_category = Category.new(name: 'New category', position: 5)
+    assert(new_category.valid?,
+      "Should be valid if position is unique")
+  end
+
 end

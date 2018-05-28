@@ -6,7 +6,7 @@ class SeedItem
     Item.all.destroy_all
 
     image_folder = 'eat'
-    
+
     # TODO: give category id for identifier
     eat_category = Category.find_by_name_en("Want to Eat")
     eat_items = [
@@ -34,10 +34,11 @@ class SeedItem
       },
 
     ]
-    eat_items.each do |eat_item|
+    eat_items.each_with_index do |eat_item, index|
       eat_category.items.create!(
         name: eat_item[:name],
         name_en: eat_item[:name_en],
+        position: index + 1,
         description: eat_item[:description],
         description_en: eat_item[:description_en],
         image: eat_item[:image],
