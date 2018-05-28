@@ -13,11 +13,13 @@
                       method: :put,
                       class: 'nav-link') %>
       </li>
-      <% if user_signed_in? -%>
-        <li><%= link_to(t('common.logout'), destroy_user_session_path, method: :delete, class: 'nav-link') %></li>
-      <% else -%>
-        <li><%= link_to(t('common.login'), new_user_session_path, class: 'nav-link') %></li>
-      <% end -%>
+      <% if false %>
+        <% if user_signed_in? -%>
+          <li><%= link_to(t('common.logout'), destroy_user_session_path, method: :delete, class: 'nav-link') %></li>
+        <% else -%>
+          <li><%= link_to(t('common.login'), new_user_session_path, class: 'nav-link') %></li>
+        <% end -%>
+      <% end %>
     </ul>
 
   </div>
@@ -48,4 +50,4 @@
       </ul>
     </div>
   </div>
-</div>  
+</div>
