@@ -3,11 +3,14 @@
   <%= f.text_field :name, class: 'form-control', placeholder: "Enter name" %>
   <%= f.label :name_en %>
   <%= f.text_field :name_en, class: 'form-control', placeholder: "Enter name_en" %>
+  <%= f.label :position %>
+  <%= f.number_field :position, class: 'form-control', placeholder: "Enter position" %>
   <%= f.label :description %>
   <%= f.text_field :description, class: 'form-control', placeholder: "Enter description" %>
   <%= f.label :description_en %>
   <%= f.text_field :description_en, class: 'form-control', placeholder: "Enter description_en" %>
   <%= f.label :image %>
   <%= f.text_field :image, class: 'form-control', placeholder: "Enter image url" %>
-  <%= f.submit(class: 'btn btn-primary') %>
+  <%= f.submit(t('form.create'), class: 'button') %>
+  <%= link_to('Back', category_items_path(@category), class: 'button secondary') %>
 <% end -%>

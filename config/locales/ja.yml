@@ -11,6 +11,9 @@ ja:
     contact: お問い合わせ
     update_success: "%{name}を更新しました。"
     menu: メニュー
+  form:
+    create: 作成
+    submit: 送信
   activerecord:
     models:
       category: カテゴリー
@@ -26,6 +29,7 @@ ja:
         name_en: 名前(英語)
         position: 順番
         description: 説明
+        description_en: 説明(英語)
         image: 画像
   category:
     title: カテゴリー
@@ -34,3 +38,4 @@ ja:
   item:
     title: 項目
     add_new: 項目を追加
+    add_new_with_name: "%{name}に項目を追加"

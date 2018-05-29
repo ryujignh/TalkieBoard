@@ -1,6 +1,7 @@
-<div class="container">
-  <h1 class="text-center mt-4"></h1>
-  <div class="row">
-    <%= render('category_items/form') %>
+<div class="row">
+  <div class="small-12 medium-8 medium-offset-2 columns">
+    <h1 class="text-center"><%= t('item.add_new_with_name', name: @category.localized_name) %></h1>
+      <%= render('category_items/form') %>
+    </div>
   </div>
 </div>

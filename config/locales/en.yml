@@ -11,6 +11,9 @@ en:
     contact: Contact
     update_success: Successfully updated %{name}.
     menu: Menu
+  form:
+    create: Create
+    submit: Submit
   activerecord:
     models:
       category: Category
@@ -23,9 +26,10 @@ en:
         image: Image
       item:
         name: Name
-        name_en: Name
+        name_en: Name(En)
         position: Position
         description: Description
+        description_en: Description(En)
         image: Image
   category:
     title: Categories
@@ -34,3 +38,4 @@ en:
   item:
     title: Items
     add_new: Add item
+    add_new_with_name: Add item to %{name}

@@ -1,0 +1,7 @@
+form:
+  create:
+    en: Create
+    ja: 作成
+  submit:
+    en: Submit
+    ja: 送信

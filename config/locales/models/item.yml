@@ -9,7 +9,7 @@ activerecord:
         en: Name
         ja: 名前
       name_en:
-        en: Name
+        en: Name(En)
         ja: 名前(英語)
       position:
         en: Position
@@ -17,6 +17,9 @@ activerecord:
       description:
         en: Description
         ja: 説明
+      description_en:
+        en: Description(En)
+        ja: 説明(英語)
       image:
         en: Image
         ja: 画像

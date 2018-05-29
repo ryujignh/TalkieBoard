@@ -5,3 +5,6 @@ item:
   add_new:
     en: Add item
     ja: 項目を追加
+  add_new_with_name:
+    en: "Add item to %{name}"
+    ja: "%{name}に項目を追加"
