@@ -1,0 +1,16 @@
+contact:
+  title:
+    en: Contact
+    ja: 連絡
+  name:
+    en: Name
+    ja: 名前
+  email:
+    en: Email
+    ja: Eメールアドレス
+  message:
+    en: Message
+    ja: メッセージ
+  submit:
+    en: Submit Message
+    ja: 送信する

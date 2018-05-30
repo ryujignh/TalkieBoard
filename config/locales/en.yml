@@ -12,6 +12,13 @@ en:
     update_success: Successfully updated %{name}.
     menu: Menu
     back: Back
+    home: Home
+  contact:
+    title: Contact
+    name: Name
+    email: Email
+    message: Message
+    submit: Submit Message
   form:
     create: Create
     submit: Submit

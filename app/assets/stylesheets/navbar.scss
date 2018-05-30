@@ -17,6 +17,13 @@ a.site_title {
   height: 3.5rem;
 }
 
+.top-bar.mobile {
+  padding: 0;
+  a.site_title {
+    font-weight: 300;
+  }
+}
+
 div.show-for-small-only {
   .row {
     width: 100%;

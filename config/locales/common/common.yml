@@ -33,3 +33,6 @@ common:
   back:
     en: Back
     ja: 戻る
+  home:
+    en: Home
+    ja: ホーム

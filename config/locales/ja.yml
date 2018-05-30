@@ -12,6 +12,13 @@ ja:
     update_success: "%{name}を更新しました。"
     menu: メニュー
     back: 戻る
+    home: ホーム
+  contact:
+    title: 連絡
+    name: 名前
+    email: Eメールアドレス
+    message: メッセージ
+    submit: 送信する
   form:
     create: 作成
     submit: 送信

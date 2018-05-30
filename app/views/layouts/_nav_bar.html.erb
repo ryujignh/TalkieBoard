@@ -22,14 +22,15 @@
 
 <div class="top-bar mobile show-for-small-only">
   <div class="row">
-    <div class="columns small-6">
+    <div class="columns small-5">
       <span class="menu-text"><%= link_to('Talkie Board', root_path, class: 'site_title') %></span>
     </div>
-    <div class="columns small-6">
+    <div class="columns small-7">
       <ul class="vertical menu accordion-menu show-for-small-only" data-accordion-menu>
         <li>
           <a href="#" class="left"><%= t('common.menu') %></a>
           <ul class="menu vertical nested">
+            <li><%= link_to(fa_icon('home', text: t('common.home')), root_path) %></li>
             <li><%= link_to(t('category.add_new'), new_category_path) %></li>
             <li>
               <%= link_to("#{t('common.languages.switch', name: avilable_language_in_words)}",
