@@ -5,3 +5,6 @@ form:
   submit:
     en: Submit
     ja: 送信
+  cancel:
+    en: Cancel
+    ja: 戻る

@@ -1,16 +1,14 @@
 <%= form_for([@category, @item]) do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name, class: 'form-control', placeholder: "Enter name" %>
+  <%= f.text_field :name, class: 'form-control'%>
   <%= f.label :name_en %>
-  <%= f.text_field :name_en, class: 'form-control', placeholder: "Enter name_en" %>
-  <%= f.label :position %>
-  <%= f.number_field :position, class: 'form-control', placeholder: "Enter position" %>
+  <%= f.text_field :name_en, class: 'form-control'%>
   <%= f.label :description %>
-  <%= f.text_field :description, class: 'form-control', placeholder: "Enter description" %>
+  <%= f.text_field :description, class: 'form-control'%>
   <%= f.label :description_en %>
-  <%= f.text_field :description_en, class: 'form-control', placeholder: "Enter description_en" %>
+  <%= f.text_field :description_en, class: 'form-control'%>
   <%= f.label :image %>
-  <%= f.text_field :image, class: 'form-control', placeholder: "Enter image url" %>
+  <%= f.text_field :image, class: 'form-control'%>
   <%= f.submit(t('form.create'), class: 'button') %>
   <%= link_to('Back', category_items_path(@category), class: 'button secondary') %>
 <% end -%>

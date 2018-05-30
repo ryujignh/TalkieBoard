@@ -6,7 +6,7 @@ a.site_title {
 .top-bar {
   background-color: rgba(15, 188, 249, 1);
   ul {
-    background-color: transparent;   
+    background-color: transparent;
     a {
       color: white;
     }
@@ -36,4 +36,8 @@ ul.accordion-menu.show-for-small-only {
 footer {
   margin-top: auto;
   padding: .5rem 0 .5rem 0;
+  background-color: rgba(15, 188, 249, 1);
+  a, p {
+    color: white !important;
+  }
 }

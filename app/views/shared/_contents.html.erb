@@ -9,9 +9,14 @@
           <%= link_to(category_items_path(content)) do %>
             <%= image_tag(content.display_image) %>
           <% end -%>
-        <% else %>  
+        <% else %>
         <!-- render items -->
           <%= image_tag(content.display_image) %>
+        <% end %>
+        <% if content = content.try(:description) %>
+          <div class="description">
+            <%= content%>
+          </div>
         <% end %>
       </div>
     </div>

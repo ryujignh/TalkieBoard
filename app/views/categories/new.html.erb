@@ -1,14 +1,17 @@
 <div class="row">
+  <div class="title_container text-center">
+    <h1 class="text-center"><%= t('category.add_new') %></h1>
+  </div>
   <div class="small-12 medium-8 medium-offset-2 columns">
     <%= form_for(@category) do |f| %>
       <%= f.label :name  %>
-      <%= f.text_field :name, class: 'form-control', placeholder: "Enter name" %>
+      <%= f.text_field :name, class: 'form-control' %>
       <%= f.label :name_en  %>
-      <%= f.text_field :name_en, class: 'form-control', placeholder: "Enter name_en" %>
+      <%= f.text_field :name_en, class: 'form-control' %>
       <%= f.label :image  %>
-      <%= f.text_field :image, class: 'form-control', placeholder: "Enter image" %>
+      <%= f.text_field :image, class: 'form-control' %>
       <%= f.submit(t('form.create'), class: 'button') %>
-      <%= link_to('Back', root_path, class: 'button secondary') %>
+      <%= link_to(t('form.cancel'), root_path, class: 'button secondary') %>
     <% end -%>
   </div>
 </div>

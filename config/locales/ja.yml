@@ -11,9 +11,11 @@ ja:
     contact: お問い合わせ
     update_success: "%{name}を更新しました。"
     menu: メニュー
+    back: 戻る
   form:
     create: 作成
     submit: 送信
+    cancel: 戻る
   activerecord:
     models:
       category: カテゴリー

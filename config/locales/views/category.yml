@@ -8,3 +8,6 @@ category:
   want_to:
     en: What would you like to tell?
     ja: あなたは何を伝えたいですか？
+  add_new:
+    en: Add category
+    ja: カテゴリーを追加

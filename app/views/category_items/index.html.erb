@@ -1,4 +1,7 @@
 <div class="row">
+  <div class="back_button button small">
+    <%= link_to(t('common.back'), root_path) %>
+  </div>
   <div class="title_container">
     <h1 class="text-center"><%= @category.localized_name %></h1>
     <%= link_to(t('item.add_new',), new_category_item_path) %>

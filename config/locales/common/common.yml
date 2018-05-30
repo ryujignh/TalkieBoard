@@ -30,3 +30,6 @@ common:
   menu:
     en: Menu
     ja: メニュー
+  back:
+    en: Back
+    ja: 戻る

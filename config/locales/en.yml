@@ -11,9 +11,11 @@ en:
     contact: Contact
     update_success: Successfully updated %{name}.
     menu: Menu
+    back: Back
   form:
     create: Create
     submit: Submit
+    cancel: Cancel
   activerecord:
     models:
       category: Category
@@ -33,7 +35,7 @@ en:
         image: Image
   category:
     title: Categories
-    add_new: Add new category
+    add_new: Add category
     want_to: What would you like to tell?
   item:
     title: Items
