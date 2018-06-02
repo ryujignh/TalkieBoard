@@ -23,7 +23,7 @@ class ItemTest < ActiveSupport::TestCase
 
     I18n.locale = :en
 
-    assert_equal(item.name_en,
+    assert_equal(item.name_ja,
       item.localized_name,
       "Should return English name if locale is English"
     )

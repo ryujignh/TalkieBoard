@@ -59,9 +59,9 @@ class CategoryItemsControllerTest < ActionDispatch::IntegrationTest
     {
       item: {
         name: "name",
-        name_en: "name_en",
+        name_ja: "name_ja",
         description: "description",
-        description_en: "description_en",
+        description_ja: "description_ja",
         image: "image",
       }
     }
@@ -71,9 +71,9 @@ class CategoryItemsControllerTest < ActionDispatch::IntegrationTest
     {
       item: {
         name: "Updated name",
-        name_en: "Updated name_en",
+        name_ja: "Updated name_ja",
         description: "Updated description",
-        description_en: "Updated description_en",
+        description_ja: "Updated description_ja",
         image: "Updated image",
       },
     }

@@ -30,15 +30,15 @@ en:
     attributes:
       category:
         name: Name
-        name_en: Name
+        name_ja: Name
         position: Position
         image: Image
       item:
         name: Name
-        name_en: Name(En)
+        name_ja: Name(En)
         position: Position
         description: Description
-        description_en: Description(En)
+        description_ja: Description(En)
         image: Image
   category:
     title: Categories

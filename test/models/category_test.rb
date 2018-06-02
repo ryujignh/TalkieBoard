@@ -13,7 +13,7 @@ class CategoryTest < ActiveSupport::TestCase
 
     I18n.locale = :en
 
-    assert_equal(category.name_en,
+    assert_equal(category.name_ja,
       category.localized_name,
       "Should return English name if locale is English"
     )

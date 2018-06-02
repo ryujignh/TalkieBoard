@@ -56,7 +56,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     {
       category: {
         name: "新カテゴリ",
-        name_en: "New category",
+        name_ja: "New category",
         image: "",
       }
     }
@@ -66,7 +66,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     {
       category: {
         name: "Name updated",
-        name_en: "Name en updated",
+        name_ja: "Name en updated",
         image: "image update path",
       },
     }

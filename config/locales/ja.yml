@@ -30,15 +30,15 @@ ja:
     attributes:
       category:
         name: 名前
-        name_en: 名前(英語)
+        name_ja: 名前(英語)
         position: 順番
         image: 画像
       item:
         name: 名前
-        name_en: 名前(英語)
+        name_ja: 名前(英語)
         position: 順番
         description: 説明
-        description_en: 説明(英語)
+        description_ja: 説明(英語)
         image: 画像
   category:
     title: カテゴリー

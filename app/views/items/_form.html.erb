@@ -1,12 +1,12 @@
 <%= form_for([@category, @item]) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name, class: 'form-control', placeholder: "Enter name" %>
-  <%= f.label :name_en %>
-  <%= f.text_field :name_en, class: 'form-control', placeholder: "Enter name_en" %>
+  <%= f.label :name_ja %>
+  <%= f.text_field :name_ja, class: 'form-control', placeholder: "Enter name_ja" %>
   <%= f.label :description %>
   <%= f.text_field :description, class: 'form-control', placeholder: "Enter description" %>
-  <%= f.label :description_en %>
-  <%= f.text_field :description_en, class: 'form-control', placeholder: "Enter description_en" %>
+  <%= f.label :description_ja %>
+  <%= f.text_field :description_ja, class: 'form-control', placeholder: "Enter description_ja" %>
   <%= f.label :image %>
   <%= f.text_field :image, class: 'form-control', placeholder: "Enter image url" %>
   <%= f.submit(class: 'btn btn-primary') %>
