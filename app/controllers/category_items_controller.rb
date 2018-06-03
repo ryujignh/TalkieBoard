@@ -13,6 +13,7 @@ class CategoryItemsController < ApplicationController
 
   def create
     @item = @category.items.new(category_items_params)
+    update_translatable_fields(@item)
     if @item.save
       redirect_to category_items_path(@category)
     else
@@ -39,6 +40,19 @@ class CategoryItemsController < ApplicationController
 
   private
 
+  def update_translatable_fields(item)
+    translator = Translator.new
+    Item::TRANSLATABLE_FIELDS[:ja].each_pair do |source, target|
+      next if skip_if_translation_present(item, target)
+      translation = translator.translate(@item.send(source))
+      @item.update_attribute(target, translation)
+    end
+  end
+
+  def skip_if_translation_present(item, target)
+    !item.send(target).blank?
+  end
+
   def set_category
     @category = Category.find(params[:category_id])
   end
@@ -48,7 +62,7 @@ class CategoryItemsController < ApplicationController
   end
 
   def category_items_params
-    params.require(:item).permit(:name, :name_en, :description, :description_en, :image)
+    params.require(:item).permit(:name, :name_ja, :description, :description_ja, :image)
   end
 
 end

@@ -1,27 +1,27 @@
 eat: {
-  name: "食べる",
-  name_en: "Eat",
+  name: "Eat",
+  name_ja: "食べる",
   position: 1,
   image: "",
 }
 
 drink: {
-  name: "飲む",
-  name_en: "Drink",
+  name: "Drink",
+  name_ja: "飲む",
   position: 2,
   image: "",
 }
 
 bathroom: {
-  name: "トイレ",
-  name_en: "Toilet",
+  name: "Toilet",
+  name_ja: "トイレ",
   position: 3,
   image: "",
 }
 
 feeling: {
-  name: "気分",
-  name_en: "Feeling",
+  name: "Feeling",
+  name_ja: "気分",
   position: 4,
   image: "",
 }

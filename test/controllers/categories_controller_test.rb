@@ -27,10 +27,30 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   def test_create_success
-    assert_difference('Category.count', 1,
-      "Should create item belongs to @category") do
-      post categories_path(create_params)
-      assert_redirected_to(root_path)
+    VCR.use_cassette("translate_eat") do
+      assert_difference('Category.count', 1,
+        "Should create item belongs to @category") do
+        assert_call_google_translate_api
+        post categories_path(create_params)
+        assert_automatically_update_name_ja_with_translation(assigns[:category])
+        assert_redirected_to(root_path)
+      end
+    end
+  end
+
+  def test_create_will_not_update_name_ja_if_included_in_params
+    VCR.use_cassette("translate_eat") do
+      assert_difference('Category.count', 1,
+        "Should create item belongs to @category") do
+        assert_call_google_translate_api
+        params_with_name_ja = create_params
+        params_with_name_ja[:category].merge!(name_ja: '食べるカテゴリー')
+        post categories_path(params_with_name_ja)
+        assert_equal('食べるカテゴリー',
+        assigns[:category].name_ja,
+        "Should keep the original value if explicitly included in params")
+        assert_redirected_to(root_path)
+      end
     end
   end
 
@@ -55,8 +75,8 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
   def create_params
     {
       category: {
-        name: "新カテゴリ",
-        name_en: "New category",
+        name: "Eat",
+        name_ja: "",
         image: "",
       }
     }
@@ -66,10 +86,21 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     {
       category: {
         name: "Name updated",
-        name_en: "Name en updated",
+        name_ja: "Name ja updated",
         image: "image update path",
       },
     }
+  end
+
+  def assert_call_google_translate_api
+    Translator.any_instance.expects(:translate).returns('食べる')
+  end
+
+  def assert_automatically_update_name_ja_with_translation(category)
+    assert_equal('食べる',
+      category.name_ja,
+      "Should automatically update name_ja with Japanese translation fetched from Google translation API")
+
   end
 
 end

@@ -10,7 +10,7 @@
       </p>
       <% end -%>
     </div>
-    <div class="small-6 columns hide-for-small-only">
+    <div class="hide-for-small-only small-6 columns text-right">
       <%= link_to(t('common.contact'), new_contact_path) %>
       <% if user_signed_in? -%>
         <p><%= link_to(t('common.logout'), destroy_user_session_path, method: :delete, class: 'nav-link') %></p>

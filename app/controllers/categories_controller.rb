@@ -13,6 +13,10 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(category_params)
+    translator = Translator.new
+    name_ja = translator.translate(@category.name)
+
+    update_name_ja_with_translation(@category, name_ja)
 
     if @category.save
       redirect_to(root_path)
@@ -39,8 +43,14 @@ class CategoriesController < ApplicationController
 
   private
 
+  def update_name_ja_with_translation(category, name_ja)
+    return unless category.name_ja.blank?
+
+    category.name_ja = name_ja
+  end
+
   def category_params
-    params.require(:category).permit(:name, :name_en, :image)
+    params.require(:category).permit(:name, :name_ja, :image)
   end
 
   def set_category
