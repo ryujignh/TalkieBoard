@@ -31,7 +31,9 @@
           <a href="#" class="left"><%= t('common.menu') %></a>
           <ul class="menu vertical nested">
             <li><%= link_to(fa_icon('home', text: t('common.home')), root_path) %></li>
-            <li><%= link_to(t('category.add_new'), new_category_path) %></li>
+            <% if user_signed_in? || Rails.env.development? -%>
+              <li><%= link_to(t('category.add_new'), new_category_path) %></li>
+            <% end %>
             <li>
               <%= link_to("#{t('common.languages.switch', name: avilable_language_in_words)}",
                             switch_language_path(locale: avilable_language),
