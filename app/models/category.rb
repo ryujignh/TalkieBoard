@@ -17,7 +17,7 @@ class Category < ApplicationRecord
   has_many :items
 
   def localized_name
-    I18n.locale == :ja ? self.name : self.name_ja
+    I18n.locale == :ja ? self.name_ja : self.name
   end
 
   def display_image

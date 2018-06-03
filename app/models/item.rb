@@ -27,7 +27,11 @@ class Item < ApplicationRecord
   belongs_to :category, touch: true
 
   def localized_name
-    I18n.locale == :ja ? self.name : self.name_ja
+    I18n.locale == :ja ? self.name_ja : self.name
+  end
+
+  def localized_description
+    I18n.locale == :ja ? self.description_ja : self.description
   end
 
   def display_image
