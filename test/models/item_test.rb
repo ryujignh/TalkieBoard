@@ -12,20 +12,37 @@ class ItemTest < ActiveSupport::TestCase
       "Should be valid if category present")
   end
 
-  def test_localize_name
+  def test_localized_name
     item = items(:item_eat)
     I18n.locale = :ja
 
-    assert_equal(item.name,
+    assert_equal(item.name_ja,
       item.localized_name,
       "Should return Japanese name if locale is Japanese"
     )
 
     I18n.locale = :en
 
-    assert_equal(item.name_ja,
+    assert_equal(item.name,
       item.localized_name,
       "Should return English name if locale is English"
+    )
+  end
+
+  def test_localized_description
+    item = items(:item_eat)
+    I18n.locale = :ja
+
+    assert_equal(item.description_ja,
+      item.localized_description,
+      "Should return Japanese description if locale is Japanese"
+    )
+
+    I18n.locale = :en
+
+    assert_equal(item.description,
+      item.localized_description,
+      "Should return English description if locale is English"
     )
   end
 

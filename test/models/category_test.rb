@@ -6,14 +6,14 @@ class CategoryTest < ActiveSupport::TestCase
     category = categories(:eat)
     I18n.locale = :ja
 
-    assert_equal(category.name,
+    assert_equal(category.name_ja,
       category.localized_name,
       "Should return Japanese name if locale is Japanese"
     )
 
     I18n.locale = :en
 
-    assert_equal(category.name_ja,
+    assert_equal(category.name,
       category.localized_name,
       "Should return English name if locale is English"
     )

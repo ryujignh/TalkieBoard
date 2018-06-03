@@ -13,7 +13,7 @@
         <!-- render items -->
           <%= image_tag(content.display_image) %>
         <% end %>
-        <% if content = content.try(:description) %>
+        <% if content = content.try(:localized_description) %>
           <div class="description">
             <%= content%>
           </div>

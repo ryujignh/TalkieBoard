@@ -2,157 +2,128 @@ class SeedEatItem
 
   def self.seed
     image_folder = 'eat'
-    parent_category = Category.find_by_name_ja("Want to Eat")
+    parent_category = Category.find_by_name("Want to Eat")
     items = [
       {
         name: "chicken",
-        name_ja: "chicken",
+        name_ja: "チキン",
         image: "#{image_folder}/chicken.svg",
       },
       {
-        name: "eat",
-        name_ja: "eat",
-        image: "#{image_folder}/eat.svg",
-      },
-      {
         name: "kushikatsu",
-        name_ja: "kushikatsu",
+        name_ja: "串カツ",
         image: "#{image_folder}/kushikatsu.svg",
       },
       {
         name: "onigiri",
-        name_ja: "onigiri",
+        name_ja: "おにぎり",
         image: "#{image_folder}/onigiri.svg",
       },
       {
         name: "salad",
-        name_ja: "salad",
+        name_ja: "サラダ",
         image: "#{image_folder}/salad.svg",
       },
       {
-        name: "sush",
-        name_ja: "sush",
+        name: "sushi",
+        name_ja: "寿司",
         image: "#{image_folder}/sush.svg",
       },
       {
         name: "wasabi",
-        name_ja: "wasabi",
+        name_ja: "わさび",
         image: "#{image_folder}/wasabi.svg",
       },
       {
         name: "crab",
-        name_ja: "crab",
+        name_ja: "カニ",
         image: "#{image_folder}/crab.svg",
       },
       {
-        name: "fried",
-        name_ja: "fried",
+        name: "fried rice",
+        name_ja: "炒飯",
         image: "#{image_folder}/fried-rice.svg",
       },
       {
-        name: "meat",
-        name_ja: "meat",
+        name: "meat ball",
+        name_ja: "ミートボール",
         image: "#{image_folder}/meat-ball.svg",
       },
       {
         name: "pizza",
-        name_ja: "pizza",
+        name_ja: "ピザ",
         image: "#{image_folder}/pizza.svg",
       },
       {
         name: "sashimi",
-        name_ja: "sashimi",
+        name_ja: "刺身",
         image: "#{image_folder}/sashimi.svg",
       },
       {
         name: "takoyaki",
-        name_ja: "takoyaki",
+        name_ja: "たこ焼き",
         image: "#{image_folder}/takoyaki.svg",
       },
       {
         name: "crepe",
-        name_ja: "crepe",
+        name_ja: "クレープ",
         image: "#{image_folder}/crepe.svg",
       },
       {
         name: "gyoza",
-        name_ja: "gyoza",
+        name_ja: "餃子",
         image: "#{image_folder}/gyoza.svg",
       },
       {
         name: "soup",
-        name_ja: "soup",
+        name_ja: "スープ",
         image: "#{image_folder}/soup.svg",
       },
       {
         name: "ramen",
-        name_ja: "ramen",
+        name_ja: "ラーメン",
         image: "#{image_folder}/ramen.svg",
       },
       {
         name: "somen",
-        name_ja: "somen",
+        name_ja: "素麺",
         image: "#{image_folder}/somen.svg",
       },
       {
         name: "tea",
-        name_ja: "tea",
+        name_ja: "お茶",
         image: "#{image_folder}/tea.svg",
       },
       {
         name: "curry",
-        name_ja: "curry",
+        name_ja: "カレー",
         image: "#{image_folder}/curry.svg",
       },
       {
         name: "hamburger",
-        name_ja: "hamburger",
+        name_ja: "ハンバーガー",
         image: "#{image_folder}/hamburger.svg",
       },
       {
         name: "noodles",
-        name_ja: "noodles",
+        name_ja: "麺類",
         image: "#{image_folder}/noodles.svg",
       },
       {
         name: "rice",
-        name_ja: "rice",
+        name_ja: "ご飯",
         image: "#{image_folder}/rice.svg",
       },
       {
         name: "steamed_fish",
-        name_ja: "steamed_fish",
+        name_ja: "お魚",
         image: "#{image_folder}/steamed_fish.svg",
       },
       {
         name: "tempura",
-        name_ja: "tempura",
+        name_ja: "天ぷら",
         image: "#{image_folder}/tempura.svg",
       },
-
-      # {
-      #   name: "ご飯",
-      #   name_ja: "Rice",
-      #   description: "ご飯が食べたいです",
-      #   description_ja: "I want to eat rice",
-      #   image: "#{image_folder}/rice.svg",
-
-      # },
-      # {
-      #   name: "味噌汁",
-      #   name_ja: "Miso soup",
-      #   description: "味噌汁が飲みたいです",
-      #   description_ja: "I want to drink miso soup",
-      #   image: "#{image_folder}/miso_soup.svg",
-      # },
-      # {
-      #   name: "オムレツ",
-      #   name_ja: "omlet",
-      #   description: "オムレツが食べたいです",
-      #   description_ja: "I want to omlet",
-      #   image: "#{image_folder}/omlet.svg",
-      # },
-
     ]
     items.each_with_index do |eat_item, index|
       parent_category.items.create!(
