@@ -15,6 +15,13 @@
 
 class Item < ApplicationRecord
 
+  TRANSLATABLE_FIELDS = {
+    ja: {
+      name: :name_ja,
+      description: :description_ja,
+    }
+  }
+
   validates_uniqueness_of :position, scope: :category_id
 
   belongs_to :category, touch: true

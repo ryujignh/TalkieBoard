@@ -72,6 +72,7 @@ group :test do
   gem 'rails-controller-testing'
   gem 'webmock', '3.4.1'
   gem 'vcr', '4.0.0'
+  gem 'mocha', '1.5.0'
 end
 
 group :development do

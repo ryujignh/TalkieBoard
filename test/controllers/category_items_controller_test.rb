@@ -28,10 +28,42 @@ class CategoryItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   def test_create
-    assert_difference('@category.items.count', 1,
-      "Should create item belongs to @category") do
-      post category_items_path(@category, create_params)
-      assert_redirected_to(category_items_path(@category))
+    VCR.use_cassette("item_response", record: :new_episodes) do
+      assert_difference('@category.items.count', 1,
+        "Should create item belongs to @category") do
+        post category_items_path(@category, create_params)
+
+        assert_equal('林檎',
+          assigns[:item].name_ja,
+          "Should save name_ja with translation")
+
+        assert_equal('私はリンゴを食べたい。',
+          assigns[:item].description_ja,
+          "Should save description_ja with translation")
+
+        assert_redirected_to(category_items_path(@category))
+      end
+    end
+  end
+
+  def test_create_will_not_call_google_translate_api_if_ja_fields_present
+    VCR.use_cassette("item_response", record: :new_episodes) do
+      assert_difference('@category.items.count', 1,
+        "Should create item belongs to @category") do
+        with_ja_params = create_params
+        with_ja_params[:item].merge!(name_ja: 'りんごちゃん', description_ja: 'りんごちゃんが食べたい。')
+        post category_items_path(@category, with_ja_params)
+
+        assert_equal('りんごちゃん',
+          assigns[:item].name_ja,
+          "Should keep the origianl name_ja")
+
+        assert_equal('りんごちゃんが食べたい。',
+          assigns[:item].description_ja,
+          "Should keep the origianl name_ja")
+
+        assert_redirected_to(category_items_path(@category))
+      end
     end
   end
 
@@ -58,10 +90,10 @@ class CategoryItemsControllerTest < ActionDispatch::IntegrationTest
   def create_params
     {
       item: {
-        name: "name",
-        name_ja: "name_ja",
-        description: "description",
-        description_ja: "description_ja",
+        name: "Apple",
+        name_ja: "",
+        description: "I want to eat an apple.",
+        description_ja: "",
         image: "image",
       }
     }
