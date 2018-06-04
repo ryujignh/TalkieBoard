@@ -19,6 +19,8 @@ ja:
     email: Eメールアドレス
     message: メッセージ
     submit: 送信する
+    thank_you: お問い合わせいただきありがとうございます。
+    thank_you_body: 内容を確認の上、折返しご連絡させていただきます。
   form:
     create: 作成
     submit: 送信

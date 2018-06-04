@@ -33,6 +33,7 @@ ul.accordion-menu.show-for-small-only {
   li.is-accordion-submenu-parent {
     a {
       text-align: right;
+      padding-left: 0;
     }
     a:after {
       right: -0.1rem;

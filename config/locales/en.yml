@@ -19,6 +19,8 @@ en:
     email: Email
     message: Message
     submit: Submit Message
+    thank_you: Thank you for your messsage.
+    thank_you_body: We will get back to you soon.
   form:
     create: Create
     submit: Submit

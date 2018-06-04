@@ -9,7 +9,7 @@ img {
 }
 
 div.content_container {
-  margin-top: 1rem;
+  margin-top: 2rem;
   div.content {
     padding: 1rem;
     border-radius: 5%;
@@ -23,6 +23,7 @@ div.content_container {
   }
 
   p.title {
-    margin-bottom: 0.25rem;
+    font-size: 1.25rem;
+    font-weight: 200;
   }
 }

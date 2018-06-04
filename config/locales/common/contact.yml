@@ -14,3 +14,9 @@ contact:
   submit:
     en: Submit Message
     ja: 送信する
+  thank_you:
+    en: Thank you for your messsage.
+    ja: お問い合わせいただきありがとうございます。
+  thank_you_body:
+    en: We will get back to you soon.
+    ja: 内容を確認の上、折返しご連絡させていただきます。

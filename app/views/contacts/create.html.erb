@@ -1,6 +1,7 @@
-<h1 class="page_title">Say Hello</h1>
-
-<div class="skinny_wrapper wrapper_padding">
-<h1>Thank you for your message</h1>
-<p>I'll get back to you soon.</p>
+<div class="row">
+  <div class="small-12 medium-10 medium-offset-1 text-center columns">
+    <h3><%= t('contact.thank_you') %></h4>
+    <p><%= t('contact.thank_you_body') %></p>
+    <%= link_to(t('common.back'), root_path, class: "button") %>
+  </div>
 </div>
