@@ -2,6 +2,7 @@
 # | Field      | Type         | Null | Key | Default | Extra          |
 # +------------+--------------+------+-----+---------+----------------+
 # | id         | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+# | ancestry   | varchar(255) | YES  | MUL | NULL    |                |
 # | name       | varchar(255) | YES  | MUL | NULL    |                |
 # | name_ja    | varchar(255) | YES  |     | NULL    |                |
 # | position   | int(11)      | YES  |     | NULL    |                |
@@ -12,9 +13,10 @@
 
 class Category < ApplicationRecord
 
-  validates :position, uniqueness: true
-
   has_many :items
+  has_ancestry
+
+  validates :position, uniqueness: true
 
   def localized_name
     I18n.locale == :ja ? self.name_ja : self.name
