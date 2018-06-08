@@ -65,7 +65,6 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'guard'
   gem 'guard-minitest'
-  gem 'guard-shell'
   gem 'pry'
   gem 'faker'
 end
