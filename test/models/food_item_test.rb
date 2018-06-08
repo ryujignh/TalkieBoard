@@ -4,7 +4,6 @@ class FoodItemTest < ActiveSupport::TestCase
 
   def test_association
     food_item = food_items(:curry)
-    # binding.pry
 
     assert_equal(food_categories(:japanese),
       food_item.category,

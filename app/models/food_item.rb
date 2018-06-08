@@ -17,6 +17,10 @@
 # +----------------+--------------+------+-----+---------+----------------+
 
 class FoodItem < ApplicationRecord
-  belongs_to :category, class_name: 'FoodCategory', foreign_key: :category_id, inverse_of: :items
+  belongs_to :category, class_name: 'FoodCategory',
+             foreign_key: :category_id, inverse_of: :items
+
+  include Naming
+  include Image
 
 end

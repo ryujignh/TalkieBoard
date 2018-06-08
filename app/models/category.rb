@@ -18,17 +18,7 @@ class Category < ApplicationRecord
 
   validates :position, uniqueness: true
 
-  def localized_name
-    I18n.locale == :ja ? self.name_ja : self.name
-  end
-
-  def display_image
-    if !self.image.blank? && FileTest.exist?("app/assets/images/#{self.image}")
-      file_path = self.image
-    else
-      file_path = 'shared/no_image.svg'
-    end
-    file_path
-  end
+  include Naming
+  include Image
 
 end

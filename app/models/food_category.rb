@@ -15,4 +15,7 @@ class FoodCategory < ApplicationRecord
   has_many :items, inverse_of: :category, class_name: 'FoodItem', foreign_key: :category_id
   has_ancestry
 
+  include Naming
+  include Image
+
 end

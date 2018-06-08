@@ -26,21 +26,11 @@ class Item < ApplicationRecord
 
   belongs_to :category, inverse_of: :items, touch: true
 
-  def localized_name
-    I18n.locale == :ja ? self.name_ja : self.name
-  end
+  include Naming
+  include Image
 
   def localized_description
     I18n.locale == :ja ? self.description_ja : self.description
-  end
-
-  def display_image
-    if !self.image.blank? && FileTest.exist?("app/assets/images/#{self.image}")
-      file_path = self.image
-    else
-      file_path = 'shared/no_image.svg'
-    end
-    file_path
   end
 
 end
