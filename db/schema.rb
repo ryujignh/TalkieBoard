@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180605001416) do
+ActiveRecord::Schema.define(version: 20180607222759) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "ancestry"
@@ -22,6 +22,33 @@ ActiveRecord::Schema.define(version: 20180605001416) do
     t.datetime "updated_at", null: false
     t.index ["ancestry"], name: "index_categories_on_ancestry"
     t.index ["name"], name: "index_categories_on_name"
+  end
+
+  create_table "food_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "ancestry"
+    t.string "cuisine"
+    t.string "name"
+    t.string "name_ja"
+    t.text "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ancestry"], name: "index_food_categories_on_ancestry"
+  end
+
+  create_table "food_items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "category_id"
+    t.string "food_type"
+    t.string "name"
+    t.string "name_ja"
+    t.string "description"
+    t.string "description_ja"
+    t.boolean "hot"
+    t.boolean "spicy"
+    t.boolean "sweet"
+    t.text "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_food_items_on_category_id"
   end
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

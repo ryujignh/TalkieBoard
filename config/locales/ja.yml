@@ -28,12 +28,30 @@ ja:
   activerecord:
     models:
       category: カテゴリー
+      food_category: 食べ物カテゴリー
+      food_item: 食べ物
       item: アイテム
     attributes:
       category:
         name: 名前
         name_ja: 名前(英語)
         position: 順番
+        image: 画像
+      food_category:
+        cuisine: 種類
+        name: 名前
+        name_ja: 名前(英語)
+        position: 順番
+        image: 画像
+      food_item:
+        type: 種類
+        name: 名前
+        name_ja: 名前(英語)
+        description: 説明
+        description_ja: 説明(英語)
+        hot: 熱い
+        spicy: 辛い
+        sweet: 甘い
         image: 画像
       item:
         name: 名前

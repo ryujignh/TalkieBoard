@@ -1,8 +1,15 @@
-class SeedEatItem
+class SeedFoodItem
 
-  def self.seed
+  def self.create
+    puts "Running #{self}..."
+
+    FoodItem.destroy_all
+
+    self.seed_japanese_foods
+  end
+
+  def self.seed_japanese_foods
     image_folder = 'eat'
-    parent_category = Category.find_by_name("Want to Eat")
     items = [
       {
         name: "chicken",
@@ -125,16 +132,21 @@ class SeedEatItem
         image: "#{image_folder}/tempura.svg",
       },
     ]
+
+    category = FoodCategory.find_by_cuisine("ja")
     items.each_with_index do |eat_item, index|
-      parent_category.items.create!(
+      category.items.create!(
         name: eat_item[:name],
         name_ja: eat_item[:name_ja],
-        position: index + 1,
         description: eat_item[:description],
         description_ja: eat_item[:description_ja],
+        hot: eat_item[:hot],
+        spicy: eat_item[:spicy],
+        sweet: eat_item[:sweet],
         image: eat_item[:image],
         )
     end
+
   end
 
 end

@@ -1,6 +1,7 @@
 class SeedFeelingItem
 
-  def self.seed
+  def self.create
+    puts "Running #{self}..."
     image_folder = 'feeling'
     parent_category = Category.find_by_name('Tell feeling')
     items = [

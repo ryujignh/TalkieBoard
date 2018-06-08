@@ -1,0 +1,38 @@
+curry: {
+  category: japanese,
+  food_type: 'curry',
+  name: 'Curry and rice',
+  name_ja: 'カレーライス',
+  description: '',
+  description_ja: '',
+  hot: false,
+  spicy: false,
+  sweet: false,
+  image: '',
+}
+
+ramen: {
+  category: japanese,
+  food_type: 'noodle',
+  name: 'Ramen',
+  name_ja: 'ラーメン',
+  description: '',
+  description_ja: '',
+  hot: false,
+  spicy: false,
+  sweet: false,
+  image: '',
+}
+
+egg_soup: {
+  category: chinese,
+  food_type: 'soup',
+  name: 'Egg soup',
+  name_ja: '卵スープ',
+  description: '',
+  description_ja: '',
+  hot: false,
+  spicy: false,
+  sweet: false,
+  image: '',
+}

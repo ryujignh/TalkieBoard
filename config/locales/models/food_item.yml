@@ -1,0 +1,34 @@
+activerecord:
+  models:
+    food_item:
+      en: Food item
+      ja: 食べ物
+  attributes:
+    food_item:
+      type:
+        en: Type
+        ja: 種類
+      name:
+        en: Name
+        ja: 名前
+      name_ja:
+        en: Name(En)
+        ja: 名前(英語)
+      description:
+        en: Description
+        ja: 説明
+      description_ja:
+        en: Description(En)
+        ja: 説明(英語)
+      hot:
+        en: Hot
+        ja: 熱い
+      spicy:
+        en: Spicy
+        ja: 辛い
+      sweet:
+        en: Sweet
+        ja: 甘い
+      image:
+        en: Image
+        ja: 画像

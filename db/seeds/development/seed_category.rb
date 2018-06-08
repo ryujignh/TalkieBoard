@@ -9,7 +9,6 @@ class SeedCategory
 
     categories = [
       {name: "Tell feeling", name_ja: "気分を伝えたい", image: "feeling/feeling.svg"},
-      {name: "Want to eat", name_ja: "食べたい", image: "eat/eat.svg"},
       {name: "Want to drink", name_ja: "飲みたい", image: "drink/drink.svg"},
       {name: "Go to bathroom", name_ja: "トイレに行きたい", image: "bathroom/toilet.svg"},
       {name: "Take bath", name_ja: "お風呂に入りたい", image: "bathroom/bath.svg"},

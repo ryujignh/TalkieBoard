@@ -1,4 +1,3 @@
-require_relative 'seed_eat_item'
 require_relative 'seed_feeling_item'
 
 class SeedItem
@@ -8,9 +7,7 @@ class SeedItem
 
     Item.all.destroy_all
     # TODO: give category id for identifier
-    SeedEatItem.seed
-    SeedFeelingItem.seed
-
+    SeedFeelingItem.create
   end
 
 end
