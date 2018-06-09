@@ -3,6 +3,7 @@
 class CreateFoodItems < ActiveRecord::Migration[5.1]
   def up
     create_table :food_items do |t|
+      t.string :cuisine
       t.string :food_type
       t.string :name
       t.string :name_ja

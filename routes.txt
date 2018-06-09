@@ -1,40 +1,42 @@
-=> Parsing localization files. Done in 0.007s.
-                  Prefix Verb   URI Pattern                                       Controller#Action
-        new_user_session GET    /users/sign_in(.:format)                          devise/sessions#new
-            user_session POST   /users/sign_in(.:format)                          devise/sessions#create
-    destroy_user_session DELETE /users/sign_out(.:format)                         devise/sessions#destroy
-       new_user_password GET    /users/password/new(.:format)                     devise/passwords#new
-      edit_user_password GET    /users/password/edit(.:format)                    devise/passwords#edit
-           user_password PATCH  /users/password(.:format)                         devise/passwords#update
-                         PUT    /users/password(.:format)                         devise/passwords#update
-                         POST   /users/password(.:format)                         devise/passwords#create
-cancel_user_registration GET    /users/cancel(.:format)                           devise/registrations#cancel
-   new_user_registration GET    /users/sign_up(.:format)                          devise/registrations#new
-  edit_user_registration GET    /users/edit(.:format)                             devise/registrations#edit
-       user_registration PATCH  /users(.:format)                                  devise/registrations#update
-                         PUT    /users(.:format)                                  devise/registrations#update
-                         DELETE /users(.:format)                                  devise/registrations#destroy
-                         POST   /users(.:format)                                  devise/registrations#create
-                    root GET    /                                                 home#index
-                contacts POST   /contacts(.:format)                               contacts#create
-             new_contact GET    /contacts/new(.:format)                           contacts#new
-          category_items GET    /categories/:category_id/items(.:format)          category_items#index
-                         POST   /categories/:category_id/items(.:format)          category_items#create
-       new_category_item GET    /categories/:category_id/items/new(.:format)      category_items#new
-      edit_category_item GET    /categories/:category_id/items/:id/edit(.:format) category_items#edit
-           category_item GET    /categories/:category_id/items/:id(.:format)      category_items#show
-                         PATCH  /categories/:category_id/items/:id(.:format)      category_items#update
-                         PUT    /categories/:category_id/items/:id(.:format)      category_items#update
-                         DELETE /categories/:category_id/items/:id(.:format)      category_items#destroy
-              categories GET    /categories(.:format)                             categories#index
-                         POST   /categories(.:format)                             categories#create
-            new_category GET    /categories/new(.:format)                         categories#new
-           edit_category GET    /categories/:id/edit(.:format)                    categories#edit
-                category GET    /categories/:id(.:format)                         categories#show
-                         PATCH  /categories/:id(.:format)                         categories#update
-                         PUT    /categories/:id(.:format)                         categories#update
-                         DELETE /categories/:id(.:format)                         categories#destroy
-         food_categories GET    /food_categories(.:format)                        food_categories#index
-                  locale GET    /locale/:id(.:format)                             locale#show
-         switch_language PATCH  /switch_language(.:format)                        switch_languages#update
-                         PUT    /switch_language(.:format)                        switch_languages#update
+=> Parsing localization files. Done in 0.008s.
+                   Prefix Verb   URI Pattern                                        Controller#Action
+food_category_items_index GET    /food_category_items/index(.:format)               food_category_items#index
+         new_user_session GET    /users/sign_in(.:format)                           devise/sessions#new
+             user_session POST   /users/sign_in(.:format)                           devise/sessions#create
+     destroy_user_session DELETE /users/sign_out(.:format)                          devise/sessions#destroy
+        new_user_password GET    /users/password/new(.:format)                      devise/passwords#new
+       edit_user_password GET    /users/password/edit(.:format)                     devise/passwords#edit
+            user_password PATCH  /users/password(.:format)                          devise/passwords#update
+                          PUT    /users/password(.:format)                          devise/passwords#update
+                          POST   /users/password(.:format)                          devise/passwords#create
+ cancel_user_registration GET    /users/cancel(.:format)                            devise/registrations#cancel
+    new_user_registration GET    /users/sign_up(.:format)                           devise/registrations#new
+   edit_user_registration GET    /users/edit(.:format)                              devise/registrations#edit
+        user_registration PATCH  /users(.:format)                                   devise/registrations#update
+                          PUT    /users(.:format)                                   devise/registrations#update
+                          DELETE /users(.:format)                                   devise/registrations#destroy
+                          POST   /users(.:format)                                   devise/registrations#create
+                     root GET    /                                                  home#index
+                 contacts POST   /contacts(.:format)                                contacts#create
+              new_contact GET    /contacts/new(.:format)                            contacts#new
+           category_items GET    /categories/:category_id/items(.:format)           category_items#index
+                          POST   /categories/:category_id/items(.:format)           category_items#create
+        new_category_item GET    /categories/:category_id/items/new(.:format)       category_items#new
+       edit_category_item GET    /categories/:category_id/items/:id/edit(.:format)  category_items#edit
+            category_item GET    /categories/:category_id/items/:id(.:format)       category_items#show
+                          PATCH  /categories/:category_id/items/:id(.:format)       category_items#update
+                          PUT    /categories/:category_id/items/:id(.:format)       category_items#update
+                          DELETE /categories/:category_id/items/:id(.:format)       category_items#destroy
+               categories GET    /categories(.:format)                              categories#index
+                          POST   /categories(.:format)                              categories#create
+             new_category GET    /categories/new(.:format)                          categories#new
+            edit_category GET    /categories/:id/edit(.:format)                     categories#edit
+                 category GET    /categories/:id(.:format)                          categories#show
+                          PATCH  /categories/:id(.:format)                          categories#update
+                          PUT    /categories/:id(.:format)                          categories#update
+                          DELETE /categories/:id(.:format)                          categories#destroy
+      food_category_items GET    /food_categories/:food_category_id/items(.:format) food_category_items#index
+          food_categories GET    /food_categories(.:format)                         food_categories#index
+                   locale GET    /locale/:id(.:format)                              locale#show
+          switch_language PATCH  /switch_language(.:format)                         switch_languages#update
+                          PUT    /switch_language(.:format)                         switch_languages#update

@@ -1,3 +1,11 @@
+parent_category: {
+  ancestry: ,
+  cuisine: "",
+  name: "Food",
+  name_ja: "食べ物",
+  image: "",
+}
+
 japanese: {
   ancestry: "",
   cuisine: "ja",

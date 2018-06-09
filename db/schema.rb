@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20180607222759) do
 
   create_table "food_items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "category_id"
+    t.string "cuisine"
     t.string "food_type"
     t.string "name"
     t.string "name_ja"

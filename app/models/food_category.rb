@@ -15,11 +15,15 @@ class FoodCategory < ApplicationRecord
   has_many :items, inverse_of: :category, class_name: 'FoodItem', foreign_key: :category_id
   has_ancestry
 
+  validates_uniqueness_of :cuisine
+
   include Naming
   include Image
 
+  scope :with_cuisine, -> { where("cuisine <> ''")  }
+
   def to_param
-    :name
+    self.cuisine
   end
 
 end

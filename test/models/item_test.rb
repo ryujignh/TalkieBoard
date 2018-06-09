@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'minitest/autorun'
 
 class ItemTest < ActiveSupport::TestCase
 
@@ -19,14 +20,14 @@ class ItemTest < ActiveSupport::TestCase
     assert_equal(item.name_ja,
       item.localized_name,
       "Should return Japanese name if locale is Japanese"
-    )
+      )
 
     I18n.locale = :en
 
     assert_equal(item.name,
       item.localized_name,
       "Should return English name if locale is English"
-    )
+      )
   end
 
   def test_localized_description
@@ -36,14 +37,14 @@ class ItemTest < ActiveSupport::TestCase
     assert_equal(item.description_ja,
       item.localized_description,
       "Should return Japanese description if locale is Japanese"
-    )
+      )
 
     I18n.locale = :en
 
     assert_equal(item.description,
       item.localized_description,
       "Should return English description if locale is English"
-    )
+      )
   end
 
   def test_display_image

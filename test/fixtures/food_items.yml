@@ -1,4 +1,5 @@
 curry: {
+  cuisine: 'Japanese',
   category: japanese,
   food_type: 'curry',
   name: 'Curry and rice',
@@ -12,6 +13,7 @@ curry: {
 }
 
 ramen: {
+  cuisine: 'Japanese',
   category: japanese,
   food_type: 'noodle',
   name: 'Ramen',
@@ -25,10 +27,25 @@ ramen: {
 }
 
 egg_soup: {
+  cuisine: 'Chinese',
   category: chinese,
   food_type: 'soup',
   name: 'Egg soup',
   name_ja: '卵スープ',
+  description: '',
+  description_ja: '',
+  hot: false,
+  spicy: false,
+  sweet: false,
+  image: '',
+}
+
+steak: {
+  cuisine: 'American',
+  category: american,
+  food_type: 'meat',
+  name: 'Steak',
+  name_ja: 'ステーキ',
   description: '',
   description_ja: '',
   hot: false,
