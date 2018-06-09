@@ -1,4 +1,4 @@
-class SeedEatItem
+class SeedFoodItem
 
   def self.seed
     image_folder = 'eat'

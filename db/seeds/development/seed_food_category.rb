@@ -5,14 +5,14 @@ class SeedFoodCategory
 
     FoodCategory.destroy_all
 
-    parent_category = FoodCategory.create!(name: 'Food', name_ja: '食べ物', image: "eat/eat.svg")
+    parent_category = FoodCategory.create!(name: 'Food', name_ja: '食べ物', image: "food_category/food.svg")
 
     categories = [
-      {parent: parent_category, cuisine: 'ja', name: 'Japanese', name_ja: '和食', image: "food/japanese.svg"},
-      {parent: parent_category, cuisine: 'it', name: 'Italian', name_ja: 'イタリアン', image: "food/italian.svg"},
-      {parent: parent_category, cuisine: 'french', name: 'French', name_ja: 'フレンチ', image: "food/french.svg"},
-      {parent: parent_category, cuisine: 'ch', name: 'Chinese', name_ja: '中華', image: "food/chinese.svg"},
-      {parent: parent_category, cuisine: 'us', name: 'American', name_ja: 'アメリカン', image: "food/american.svg"},
+      {parent: parent_category, cuisine: 'common', name: 'common', name_ja: '共通', image: "food_category/food.svg"},
+      {parent: parent_category, cuisine: 'japanese', name: 'Japanese', name_ja: '和食', image: "food_category/japanese.svg"},
+      {parent: parent_category, cuisine: 'italian', name: 'Italian', name_ja: 'イタリアン', image: "food_category/italian.svg"},
+      {parent: parent_category, cuisine: 'chinese', name: 'Chinese', name_ja: '中華', image: "food_category/chinese.svg"},
+      {parent: parent_category, cuisine: 'american', name: 'American', name_ja: 'アメリカン', image: "food_category/american.svg"},
     ]
 
     categories.each_with_index do |category, index|

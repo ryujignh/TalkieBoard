@@ -8,7 +8,10 @@
   <%= render('shared/category', category: @food_category, content_type: 'category',
                                 sub_categories_path: food_categories_path) %>
 
-  <%= render('shared/contents', contents: @categories, content_type: 'category') %>
+  <% @categories.each do |category| %>
+    <%= render('shared/category', category: category, content_type: 'category') %>
+
+  <% end %>
 </div>
 
 
