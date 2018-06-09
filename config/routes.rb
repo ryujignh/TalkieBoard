@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     resources :items, controller: 'category_items'
   end
 
+  resources :food_categories, only: [:index]
+
   resources :locale, only: [:show]
   resource :switch_language, only: [:update]
 end

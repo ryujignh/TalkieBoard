@@ -1,26 +1,22 @@
-<div class="row">
 <% contents = local_assigns[:contents] %>
-  <% contents.each do |content| %>
-    <div class="content_container text-center small-6 medium-3 large-3 columns end">
-      <div class="content">
-        <p class="title"><%= content.localized_name %></p>
-        <% if local_assigns[:content_type] == 'category' %>
-          <!-- render with link to category items -->
-          <%= link_to(category_items_path(content)) do %>
-            <%= image_tag(content.display_image) %>
-          <% end -%>
-        <% else %>
-        <!-- render items -->
+<% contents.each do |content| %>
+  <div class="content_container text-center small-6 medium-3 large-3 columns end">
+    <div class="content">
+      <p class="title"><%= content.localized_name %></p>
+      <% if local_assigns[:content_type] == 'category' %>
+        <!-- render with link to category items -->
+        <%= link_to(category_items_path(content)) do %>
           <%= image_tag(content.display_image) %>
-        <% end %>
-        <% if content = content.try(:localized_description) %>
-          <div class="description">
-            <%= content%>
-          </div>
-        <% end %>
-      </div>
+        <% end -%>
+      <% else %>
+      <!-- render items -->
+        <%= image_tag(content.display_image) %>
+      <% end %>
+      <% if content = content.try(:localized_description) %>
+        <div class="description">
+          <%= content%>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-
-
-</div>
+  </div>
+<% end %>

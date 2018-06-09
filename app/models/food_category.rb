@@ -18,4 +18,8 @@ class FoodCategory < ApplicationRecord
   include Naming
   include Image
 
+  def to_param
+    :name
+  end
+
 end

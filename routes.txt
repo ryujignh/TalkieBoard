@@ -34,6 +34,7 @@ cancel_user_registration GET    /users/cancel(.:format)                         
                          PATCH  /categories/:id(.:format)                         categories#update
                          PUT    /categories/:id(.:format)                         categories#update
                          DELETE /categories/:id(.:format)                         categories#destroy
+         food_categories GET    /food_categories(.:format)                        food_categories#index
                   locale GET    /locale/:id(.:format)                             locale#show
          switch_language PATCH  /switch_language(.:format)                        switch_languages#update
                          PUT    /switch_language(.:format)                        switch_languages#update

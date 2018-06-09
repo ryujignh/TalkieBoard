@@ -55,11 +55,11 @@ guard 'livereload' do
 end
 
 guard :minitest do
-  puts 'asd'
   # with Minitest::Unit
   watch(%r{^test/(.*)\/?test_(.*)\.rb$})
   watch(%r{^lib/(.*/)?([^/]+)\.rb$})     { |m| "test/#{m[1]}test_#{m[2]}.rb" }
   watch(%r{^test/test_helper\.rb$})      { 'test' }
+  watch(/^config\/routes\.rb$/) { `bundle exec rake routes > routes.txt` }
 
   # with Minitest::Spec
   # watch(%r{^spec/(.*)_spec\.rb$})
