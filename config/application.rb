@@ -24,7 +24,7 @@ module TalkieBoard
 
     config.i18n.default_locale = :ja
     # automatically parse our special combined language I18n files and output into individual language YAML dictionaries
-    LocaleParser.new.run if Rails.env.development? || Rails.env.test?
+    LocaleParser.new.run if Rails.env.development?
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

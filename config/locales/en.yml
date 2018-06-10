@@ -28,12 +28,31 @@ en:
   activerecord:
     models:
       category: Category
+      food_category: Food category
+      food_item: Food item
       item: Item
     attributes:
       category:
+        identifier: identifier
         name: Name
         name_ja: Name
         position: Position
+        image: Image
+      food_category:
+        cuisine: Cuisine
+        name: Name
+        name_ja: Name
+        position: Position
+        image: Image
+      food_item:
+        type: Type
+        name: Name
+        name_ja: Name(En)
+        description: Description
+        description_ja: Description(En)
+        hot: Hot
+        spicy: Spicy
+        sweet: Sweet
         image: Image
       item:
         name: Name

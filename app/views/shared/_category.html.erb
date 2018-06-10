@@ -1,0 +1,30 @@
+<%
+  category = local_assigns[:category]
+  sub_categories_path = local_assigns[:sub_categories_path]
+  items_path = local_assigns[:items_path]
+%>
+<div class="content_container text-center small-6 medium-3 large-2 columns end">
+  <div class="content">
+    <p class="title"><%= category.localized_name %></p>
+
+    <% if sub_categories_path %>
+      <%= link_to(sub_categories_path) do %>
+        <%= image_tag(category.display_image) %>
+      <% end -%>
+    <% elsif items_path %>
+      <%= link_to(items_path) do %>
+        <%= image_tag(category.display_image) %>
+      <% end -%>
+    <% else -%>
+      <%= link_to(category_items_path(category)) do %>
+        <%= image_tag(category.display_image) %>
+      <% end -%>
+    <!-- render items -->
+    <% end %>
+    <% if category = category.try(:localized_description) %>
+      <div class="description">
+        <%= category%>
+      </div>
+    <% end %>
+  </div>
+</div>

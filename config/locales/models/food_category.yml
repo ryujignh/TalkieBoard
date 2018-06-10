@@ -1,0 +1,22 @@
+activerecord:
+  models:
+    food_category:
+      en: Food category
+      ja: 食べ物カテゴリー
+  attributes:
+    food_category:
+      cuisine:
+        en: Cuisine
+        ja: 種類
+      name:
+        en: Name
+        ja: 名前
+      name_ja:
+        en: Name
+        ja: 名前(英語)
+      position:
+        en: Position
+        ja: 順番
+      image:
+        en: Image
+        ja: 画像

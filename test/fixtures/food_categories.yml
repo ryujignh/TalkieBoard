@@ -1,0 +1,47 @@
+parent_category: {
+  ancestry: ,
+  cuisine: "",
+  name: "Food",
+  name_ja: "食べ物",
+  image: "",
+}
+
+japanese: {
+  ancestry: "",
+  cuisine: "ja",
+  name: "japanese",
+  name_ja: "和食",
+  image: "",
+}
+
+italian: {
+  ancestry: "",
+  cuisine: "it",
+  name: "italian",
+  name_ja: "イタリアン",
+  image: "",
+}
+
+french: {
+  ancestry: "",
+  cuisine: "fr",
+  name: "french",
+  name_ja: "フレンチ",
+  image: "",
+}
+
+american: {
+  ancestry: "",
+  cuisine: "us",
+  name: "american",
+  name_ja: "アメリカン",
+  image: "",
+}
+
+chinese: {
+  ancestry: "",
+  cuisine: "ch",
+  name: "chinese",
+  name_ja: "中華",
+  image: "",
+}

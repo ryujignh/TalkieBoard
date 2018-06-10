@@ -4,7 +4,16 @@
   </div>
 </div>
 
-<%= render('shared/contents', contents: @categories, content_type: 'category') %>
+<div class="row">
+  <%= render('shared/category', category: @food_category, content_type: 'category',
+                                sub_categories_path: food_categories_path) %>
+
+  <% @categories.each do |category| %>
+    <%= render('shared/category', category: category, content_type: 'category') %>
+
+  <% end %>
+</div>
+
 
 <% if false %>
   <% if Rails.env.development? || user_signed_in? %>
