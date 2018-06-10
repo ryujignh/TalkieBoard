@@ -1,17 +1,17 @@
 load 'db/seeds/development/seed_item.rb'
 
-class SeedFeelingItem < SeedItem
+class SeedGreetingItem < SeedItem
 
   def self.create
     puts "Running #{self}..."
-    parent_category = Category.find_by_identifier('feeling')
+    parent_category = Category.find_by_identifier('greeting')
 
-    csv_file_path = "db/seeds/feeling_items.csv"
+    csv_file_path = "db/seeds/greeting_items.csv"
     items = CSV.read(csv_file_path, headers: true)
-    image_folder = "pain_scale"
+    image_folder = "greeting"
 
     self.seed_items(parent_category, items, image_folder)
-
   end
+
 
 end

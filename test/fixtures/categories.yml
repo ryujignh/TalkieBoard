@@ -1,4 +1,5 @@
 eat: {
+  identifier: 'eat',
   name: "Eat",
   name_ja: "食べる",
   position: 1,
@@ -6,6 +7,7 @@ eat: {
 }
 
 drink: {
+  identifier: 'drink',
   name: "Drink",
   name_ja: "飲む",
   position: 2,
@@ -13,6 +15,7 @@ drink: {
 }
 
 bathroom: {
+  identifier: 'toilet',
   name: "Toilet",
   name_ja: "トイレ",
   position: 3,
@@ -20,6 +23,7 @@ bathroom: {
 }
 
 feeling: {
+  identifier: 'feeling',
   name: "Feeling",
   name_ja: "気分",
   position: 4,

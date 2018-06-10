@@ -1,6 +1,7 @@
 class SeedFoodCategory
 
   def self.create
+    puts "=================Creating Food Category================="
     puts "Running #{self}..."
 
     FoodCategory.destroy_all

@@ -2,7 +2,7 @@ class SeedFeelingItem
 
   def self.seed
     image_folder = 'feeling'
-    parent_category = Category.find_by_name('Tell feeling')
+    parent_category = Category.find_by_identifier('Tell feeling')
     items = [
       {
         name: "1",

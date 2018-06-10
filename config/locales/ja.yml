@@ -33,6 +33,7 @@ ja:
       item: アイテム
     attributes:
       category:
+        identifier: 識別子
         name: 名前
         name_ja: 名前(英語)
         position: 順番

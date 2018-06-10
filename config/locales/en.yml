@@ -33,6 +33,7 @@ en:
       item: Item
     attributes:
       category:
+        identifier: identifier
         name: Name
         name_ja: Name
         position: Position

@@ -5,6 +5,9 @@ activerecord:
       ja: カテゴリー
   attributes:
     category:
+      identifier:
+        en: identifier
+        ja: 識別子
       name:
         en: Name
         ja: 名前

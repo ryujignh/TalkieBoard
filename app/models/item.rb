@@ -15,6 +15,8 @@
 
 class Item < ApplicationRecord
 
+  before_save :format_values
+
   TRANSLATABLE_FIELDS = {
     ja: {
       name: :name_ja,
@@ -22,7 +24,7 @@ class Item < ApplicationRecord
     }
   }
 
-  validates_uniqueness_of :position, scope: :category_id
+  validates_uniqueness_of :position, scope: :category_id, allow_blank: true
 
   belongs_to :category, inverse_of: :items, touch: true
 
@@ -31,6 +33,10 @@ class Item < ApplicationRecord
 
   def localized_description
     I18n.locale == :ja ? self.description_ja : self.description
+  end
+
+  def format_values
+    self.image = self.image.gsub(' ', '_')
   end
 
 end

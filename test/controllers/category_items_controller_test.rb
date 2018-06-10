@@ -106,7 +106,7 @@ class CategoryItemsControllerTest < ActionDispatch::IntegrationTest
         name_ja: "Updated name_ja",
         description: "Updated description",
         description_ja: "Updated description_ja",
-        image: "Updated image",
+        image: "Updated_image",
       },
     }
   end
