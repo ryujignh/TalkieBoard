@@ -3,7 +3,6 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   def show
-    @category = Category.find(params[:id])
     @items = @category.items
   end
 
@@ -27,7 +26,6 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-    @category = Category.find(params[:id])
   end
 
   def update
@@ -54,7 +52,7 @@ class CategoriesController < ApplicationController
   end
 
   def set_category
-    @category = Category.find(params[:id])
+    @category = Category.find_by_name(params[:id])
   end
 
 end

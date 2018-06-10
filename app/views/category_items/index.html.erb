@@ -6,7 +6,11 @@
     <% end %>
   </div>
 </div>
-  <%= render('shared/contents', contents: @items) %>
+<div class="row">
+  <% @items.each do |item| %>
+    <%= render('shared/item', item: item) %>
+  <% end %>
+</div>
 
 <% if false %>
   <% if Rails.env.development? || user_signed_in? %>

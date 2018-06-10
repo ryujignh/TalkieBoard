@@ -5,9 +5,9 @@
     <p class="title"><%= item.localized_name %></p>
     <%= image_tag(item.display_image) %>
     <!-- render items -->
-    <% if item = item.try(:localized_description) %>
+    <% if description = item.try(:localized_description) %>
       <div class="description">
-        <%= item.description %>
+        <%= description %>
       </div>
     <% end %>
   </div>

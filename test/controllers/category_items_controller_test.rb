@@ -8,7 +8,7 @@ class CategoryItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   def test_index
-    get category_items_path(@category)
+    get category_items_path(@category.to_param)
 
     assert_response(:success)
     assert_equal(@category,
@@ -20,7 +20,7 @@ class CategoryItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   def test_new
-    get new_category_item_path(@category)
+    get new_category_item_path(@category.to_param)
 
     assert_response(:success)
     assert(assigns[:item],
@@ -41,7 +41,7 @@ class CategoryItemsControllerTest < ActionDispatch::IntegrationTest
           assigns[:item].description_ja,
           "Should save description_ja with translation")
 
-        assert_redirected_to(category_items_path(@category))
+        assert_redirected_to(category_items_path(@category.to_param))
       end
     end
   end
@@ -62,21 +62,21 @@ class CategoryItemsControllerTest < ActionDispatch::IntegrationTest
           assigns[:item].description_ja,
           "Should keep the origianl name_ja")
 
-        assert_redirected_to(category_items_path(@category))
+        assert_redirected_to(category_items_path(@category.to_param))
       end
     end
   end
 
   def test_edit
-    get edit_category_item_path(@category, @item)
+    get edit_category_item_path(@category.to_param, @item)
     assert_response(:success)
   end
 
   def test_update
     with_locale(:en) do
       item = @item
-      put category_item_path(update_params.merge(id: item.id, category_id: @category.id))
-      assert_redirected_to(category_items_path(@category))
+      put category_item_path(update_params.merge(id: item.id, category_id: @category.to_param))
+      assert_redirected_to(category_items_path(@category.to_param))
       assert_equal("Successfully updated Item.",
         flash[:success],
         "Should flash notice for update success")

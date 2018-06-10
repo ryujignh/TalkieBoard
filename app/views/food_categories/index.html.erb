@@ -4,6 +4,8 @@
   </div>
 </div>
 
-<% @categories.each do |category| %>
-  <%= render('shared/category', category: category, items_path: food_category_items_path(category)) %>
-<% end %>
+<div class="row">
+  <% @categories.each do |category| %>
+    <%= render('shared/category', category: category, items_path: food_category_items_path(category)) %>
+  <% end %>
+</div>

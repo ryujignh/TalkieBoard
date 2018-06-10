@@ -21,4 +21,8 @@ class Category < ApplicationRecord
   include Naming
   include Image
 
+  def to_param
+    self.name
+  end
+
 end
