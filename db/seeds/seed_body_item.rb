@@ -1,4 +1,4 @@
-load 'db/seeds/development/seed_item.rb'
+load 'db/seeds/seed_item.rb'
 
 class SeedBodyItem < SeedItem
 
