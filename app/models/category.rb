@@ -2,6 +2,8 @@
 # | Field      | Type         | Null | Key | Default | Extra          |
 # +------------+--------------+------+-----+---------+----------------+
 # | id         | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+# | ancestry   | varchar(255) | YES  | MUL | NULL    |                |
+# | identifier | varchar(255) | YES  |     | NULL    |                |
 # | name       | varchar(255) | YES  | MUL | NULL    |                |
 # | name_ja    | varchar(255) | YES  |     | NULL    |                |
 # | position   | int(11)      | YES  |     | NULL    |                |
@@ -11,22 +13,23 @@
 # +------------+--------------+------+-----+---------+----------------+
 
 class Category < ApplicationRecord
+  before_save :format_values
+
+  has_many :items, inverse_of: :category
+  has_ancestry
 
   validates :position, uniqueness: true
 
-  has_many :items
+  include Naming
+  include Image
 
-  def localized_name
-    I18n.locale == :ja ? self.name_ja : self.name
+  def to_param
+    self.identifier
   end
 
-  def display_image
-    if !self.image.blank? && FileTest.exist?("app/assets/images/#{self.image}")
-      file_path = self.image
-    else
-      file_path = 'shared/no_image.svg'
-    end
-    file_path
+  def format_values
+    return if self.identifier.blank?
+    self.identifier = self.identifier.downcase.gsub(' ', '_')
   end
 
 end

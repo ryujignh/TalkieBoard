@@ -1,0 +1,14 @@
+<% item = local_assigns[:item] %>
+
+<div class="content_container text-center small-6 medium-3 large-2 columns end">
+  <div class="content">
+    <p class="title"><%= item.localized_name %></p>
+    <%= image_tag(item.display_image) %>
+    <!-- render items -->
+    <% if description = item.try(:localized_description) %>
+      <div class="description">
+        <%= description %>
+      </div>
+    <% end %>
+  </div>
+</div>

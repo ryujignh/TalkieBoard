@@ -15,6 +15,8 @@
 
 class Item < ApplicationRecord
 
+  before_save :format_values
+
   TRANSLATABLE_FIELDS = {
     ja: {
       name: :name_ja,
@@ -22,25 +24,19 @@ class Item < ApplicationRecord
     }
   }
 
-  validates_uniqueness_of :position, scope: :category_id
+  validates_uniqueness_of :position, scope: :category_id, allow_blank: true
 
-  belongs_to :category, touch: true
+  belongs_to :category, inverse_of: :items, touch: true
 
-  def localized_name
-    I18n.locale == :ja ? self.name_ja : self.name
-  end
+  include Naming
+  include Image
 
   def localized_description
     I18n.locale == :ja ? self.description_ja : self.description
   end
 
-  def display_image
-    if !self.image.blank? && FileTest.exist?("app/assets/images/#{self.image}")
-      file_path = self.image
-    else
-      file_path = 'shared/no_image.svg'
-    end
-    file_path
+  def format_values
+    self.image = self.image.gsub(' ', '_')
   end
 
 end

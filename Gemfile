@@ -55,15 +55,16 @@ gem 'dotenv-rails'
 
 gem 'google-cloud-translate'
 
+gem 'ancestry', '3.0.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-  gem 'guard'
-  gem 'guard-minitest'
-  gem 'guard-shell'
+  gem 'guard', require: false
+  gem 'guard-minitest', require: false
   gem 'pry'
   gem 'faker'
 end

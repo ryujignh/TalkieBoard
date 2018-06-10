@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="title_container">
+    <h1 class="text-center"><%= m(:food_category) %></h1>
+  </div>
+</div>
+
+<div class="row">
+  <% @categories.each do |category| %>
+    <%= render('shared/category', category: category, items_path: food_category_items_path(category)) %>
+  <% end %>
+</div>

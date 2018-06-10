@@ -1,0 +1,14 @@
+name,name_ja,image,food_type
+rice,ご飯,rice
+tofu,豆腐,tofu
+soup,スープ,soup,soup
+egg,卵,egg
+butter,バター,butter,seasoning
+ketchup,ケチャップ,ketchup,seasoning
+salt,塩,salt,seasoning
+pepper,こしょう,pepper,seasoning
+salad,サラダ,salad,vegetable
+vegetable,野菜,vegetable,vegetable
+carrot,人参,carrot,vegetable
+pumpkin,かぼちゃ,pumpkin,vegetable
+lettuce,レタス,lettuce,vegetable

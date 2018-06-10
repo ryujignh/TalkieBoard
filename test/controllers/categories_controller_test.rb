@@ -7,7 +7,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   def test_show
-    get category_path(@category)
+    get category_path(@category.to_param)
     assert_response(:success)
     assert_equal(@category,
       assigns[:category],
@@ -55,13 +55,13 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   def test_edit
-    get edit_category_path(@category)
+    get edit_category_path(@category.to_param)
     assert_response(:success)
   end
 
   def test_update_success
     with_locale(:en) do
-      put category_path(update_params.merge(id: @category.id))
+      put category_path(update_params.merge(id: @category.to_param))
       assert_redirected_to(root_path)
       assert_equal("Successfully updated Category.",
         flash[:success],
