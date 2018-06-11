@@ -2,6 +2,7 @@ class ContactsController < ApplicationController
 
   def new
     @contact = Contact.new
+    set_meta_tags(title: t('contact.title'))
   end
 
   def create

@@ -5,6 +5,7 @@ class CategoryItemsController < ApplicationController
 
   def index
     @items = @category.items
+    set_meta_tags(title: @category.localized_name)
   end
 
   def new
