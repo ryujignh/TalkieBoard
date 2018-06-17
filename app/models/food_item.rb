@@ -38,7 +38,8 @@ class FoodItem < ApplicationRecord
   end
 
   def format_values
-    self.cuisine = self.cuisine.try(:downcase)
+    self.cuisine = self.cuisine.try(:downcase).try(:gsub, ' ', '_')
+    self.image = self.image.try(:downcase).try(:gsub, ' ', '_')
   end
 
 end

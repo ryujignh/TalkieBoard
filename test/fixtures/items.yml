@@ -1,6 +1,6 @@
 item_eat: {
   category: eat,
-  name: "name",
+  name: "Name",
   name_ja: "name ja",
   position: 1,
   description: "description",
@@ -10,7 +10,7 @@ item_eat: {
 
 item_drink: {
   category: drink,
-  name: "name",
+  name: "Name",
   name_ja: "name ja",
   position: 2,
   description: "description",
@@ -20,7 +20,7 @@ item_drink: {
 
 item_bathroom: {
   category: bathroom,
-  name: "name",
+  name: "Name",
   name_ja: "name ja",
   position: 3,
   description: "description",
@@ -30,7 +30,7 @@ item_bathroom: {
 
 item_feeling: {
   category: feeling,
-  name: "name",
+  name: "Name",
   name_ja: "name ja",
   position: 4,
   description: "description",

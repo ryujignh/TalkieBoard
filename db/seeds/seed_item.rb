@@ -7,6 +7,9 @@ require_relative 'seed_antonym_item'
 require_relative 'seed_number_item'
 require_relative 'seed_body_item'
 require_relative 'seed_greeting_item'
+require_relative 'seed_drink_item'
+require_relative 'seed_activity_item'
+require_relative 'seed_excercise_item'
 
 class SeedItem
 
@@ -18,11 +21,14 @@ class SeedItem
     SeedPainScaleItem.create
     SeedFeelingItem.create
     SeedTroubleItem.create
-    SeedRequestItem.create
-    SeedAntonymItem.create
-    SeedNumberItem.create
+    # SeedRequestItem.create
+    # SeedAntonymItem.create
+    # SeedNumberItem.create
     SeedBodyItem.create
     SeedGreetingItem.create
+    SeedDrinkItem.create
+    SeedActivityItem.create
+    SeedExcerciseItem.create
   end
 
   private

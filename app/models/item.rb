@@ -36,7 +36,7 @@ class Item < ApplicationRecord
   end
 
   def format_values
-    self.image = self.image.gsub(' ', '_')
+    self.image = self.image.gsub(' ', '_').downcase
   end
 
 end

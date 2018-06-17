@@ -8,7 +8,7 @@ class SeedFeelingItem < SeedItem
 
     csv_file_path = "db/seeds/feeling_items.csv"
     items = CSV.read(csv_file_path, headers: true)
-    image_folder = "pain_scale"
+    image_folder = "feeling"
 
     self.seed_items(parent_category, items, image_folder)
 

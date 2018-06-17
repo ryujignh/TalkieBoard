@@ -18,8 +18,8 @@ module ApplicationHelper
        title: '',
        reverse: true,
        charset: 'utf-8',
-       description: 'Multilingual communication board for aphasia',
-       keywords: 'communication,board,aphasia,speach,therapy',
+       description: 'Multilingual communication board for aphasia. 失語症の人の為のコミュニケーションボード。',
+       keywords: 'コミュニケーションボード,失語,コミュニケーション,communication,board,aphasia,speach,therapy',
        canonical: request.original_url,
        separator: '|',
        # icon: [

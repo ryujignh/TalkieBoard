@@ -13,7 +13,13 @@ class SeedFoodItem
       'italian',
       'chinese',
       'american',
-      'common',
+      'ingredient',
+      'vegetable',
+      'seafood',
+      'dairy',
+      'seasoning',
+      'meat',
+      'fruit',
     ].each do |cuisine|
       self.seed_foods(cuisine)
     end
@@ -30,10 +36,12 @@ class SeedFoodItem
   end
 
   def self.create_items(category, items, image_folder)
+    puts category
     items.each_with_index do |eat_item, index|
       category.items.create!(
         name: eat_item['name'],
         name_ja: eat_item['name_ja'],
+        food_type: eat_item['food_type'],
         description: eat_item['description'],
         description_ja: eat_item['description_ja'],
         hot: eat_item['hot'],
