@@ -9,7 +9,9 @@
                                 sub_categories_path: food_categories_path) %>
 
   <% @categories.each do |category| %>
-    <%= render('shared/category', category: category, content_type: 'category') %>
+    <% cache(category) do %>
+      <%= render('shared/category', category: category, content_type: 'category') %>
+    <% end %>
 
   <% end %>
 </div>
