@@ -55,7 +55,7 @@ class CategoryItemsController < ApplicationController
   end
 
   def set_category
-    @category = Category.find_by_identifier(params[:category_id])
+    @category = Category.find_by_identifier(params[:category_id].downcase)
   end
 
   def set_item

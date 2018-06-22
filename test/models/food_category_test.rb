@@ -34,4 +34,17 @@ class FoodCategoryTest < ActiveSupport::TestCase
 
   end
 
+  def test_cuisine_types
+    I18n.locale = :ja
+    assert_equal([
+      ["ja", "和食"],
+      ["us", "アメリカン"],
+      ["it", "イタリアン"],
+      ["fr", "フレンチ"],
+      ["ch", "中華"]
+    ],
+      FoodCategory.cuisine_types,
+      "Should array of cuisine + localized name")
+  end
+
 end

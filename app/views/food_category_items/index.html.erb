@@ -1,11 +1,14 @@
-<div class="row">
-  <div class="title_container">
-    <h1 class="text-center"><%= @category.localized_name %></h1>
-  </div>
+<div class="row tabs">
+  <ul class="tabs cuisine_type_tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
+    <% @cuisine_types.each_with_index do |cuisine_type, index| %>
+      <li id="<%= cuisine_type[0] %>" class="tabs-title <%= 'is-active' if @category.cuisine == cuisine_type %>"><a><%= cuisine_type[1].capitalize %></a></li>
+    <% end %>
+  </ul>
 </div>
 
-<div class="row">
-  <% @items.each do |item| %>
-    <%= render('shared/item', item: item) %>
-  <% end %>
-</div>
+<section>
+  <div id="food_items_container">
+    <%= render('food_category_items/food_items') %>
+  </div>
+</section>
+
