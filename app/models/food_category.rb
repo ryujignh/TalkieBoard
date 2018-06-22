@@ -26,4 +26,13 @@ class FoodCategory < ApplicationRecord
     self.cuisine
   end
 
+  def self.cuisine_types
+    cuisine_types = []
+    self.all.each do |food_category|
+      next if food_category.cuisine.blank?
+      cuisine_types << [food_category.cuisine, food_category.localized_name]
+    end
+    cuisine_types
+  end
+
 end

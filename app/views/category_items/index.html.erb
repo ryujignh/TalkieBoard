@@ -8,7 +8,9 @@
 </div>
 <div class="row">
   <% @items.each do |item| %>
-    <%= render('shared/item', item: item) %>
+    <% cache(item) do %>
+      <%= render('shared/item', item: item) %>
+    <% end %>
   <% end %>
 </div>
 

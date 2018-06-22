@@ -6,6 +6,8 @@
 
 <div class="row">
   <% @categories.each do |category| %>
-    <%= render('shared/category', category: category, items_path: food_category_items_path(category)) %>
+    <% cache(category) do %>
+      <%= render('shared/category', category: category, items_path: food_category_items_path(category)) %>
+    <% end %>
   <% end %>
 </div>

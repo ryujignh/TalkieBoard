@@ -3,6 +3,14 @@ section.main_section {
   margin-bottom: 2.5rem;
 }
 
+.row.tabs {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  ul {
+    width: 100%;
+  }
+}
+
 img {
   width: 80%;
   height: 80%;
